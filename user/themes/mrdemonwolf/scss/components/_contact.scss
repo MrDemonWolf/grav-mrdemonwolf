@@ -1,0 +1,139 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the contact component.
+// -----------------------------------------------------------------------------
+.contact {
+    background-color: #25aae1;
+}
+
+#message {
+    height: 100px;
+}
+
+.message {
+    &.label {
+        top: 1px;
+        bottom: clear;
+    }
+}
+
+.content-wrapper {
+    min-height: 100%;
+    position: relative;
+}
+
+.align-center {
+    text-align: center;
+}
+
+.row-contact {
+    margin: -20px 0 !important;
+
+    :after {
+        content: "" !important;
+        display: table !important;
+        clear: both !important;
+    }
+
+    .col {
+        padding: 0 20px;
+        float: left;
+        box-sizing: border-box;
+    }
+
+    .col.x-50 {
+        width: 50%;
+    }
+
+    .col.x-100 {
+        width: 100%;
+    }
+}
+
+.get-in-touch {
+    max-width: 85%;
+    margin: 0 auto;
+    position: relative;
+
+    .title {
+        font-family: $main-font;
+        color: #ffffff;
+        text-align: center;
+        text-transform: uppercase;
+        font-weight: 700;
+        font-size: 2em;
+        line-height: 48px;
+        padding-bottom: 32px;
+    }
+}
+
+.contact-form .form-field {
+    position: relative;
+    margin: 32px 0;
+}
+
+.contact-form .input-text {
+    display: block;
+    width: 100%;
+    height: 36px;
+    border-width: 0 0 2px 0;
+    border-color: #000;
+    font-family: $main-font;
+    font-size: 18px;
+    line-height: 26px;
+    font-weight: 400;
+
+    &:focus {
+        outline: none;
+    }
+}
+
+.contact-form .input-text:focus + .label, .contact-form .input-text.not-empty + .label {
+    transform: translateY(-32px);
+    color: #ffffff;
+    transition: 500ms;
+}
+
+.contact-form .label {
+    position: absolute;
+    left: 20px;
+    bottom: -2px;
+    font-family: $main-font;
+    font-size: 18px;
+    line-height: 26px;
+    font-weight: 400;
+    color: #888;
+    cursor: text;
+    transition: transform .2s ease-in-out;
+}
+
+.contact-form .btn {
+    display: inline-block;
+    border-bottom: 4px solid #ddd;
+    font-family: $main-font;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 16px;
+    line-height: 24px;
+    padding: 8px 16px;
+    border: none;
+}
+
+@media (max-width: 990px) {
+    .contact-form .form-field {
+        margin: 18px 0;
+    }
+
+    .contact-form .btn {
+        margin: 0 0 30px;
+    }
+}
+
+@media (max-width: 768px) {
+    .get-in-touch {
+        max-width: 100%;
+    }
+
+    .btn-center {
+        text-align: center;
+    }
+}

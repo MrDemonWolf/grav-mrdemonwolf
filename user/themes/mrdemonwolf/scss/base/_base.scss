@@ -1,0 +1,57 @@
+// -----------------------------------------------------------------------------
+// This file contains very basic styles.
+// -----------------------------------------------------------------------------
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+    margin-bottom: 60px; /* Margin bottom by footer height */
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+.img-circle {
+    border-radius: 50%;
+}
+
+// Center Row
+.row-centered {
+    text-align: center;
+}
+
+// Center Col
+.col-centered {
+    margin: 0 auto;
+    float: none;
+}
+
+.ul-np {
+    padding: 0px;
+    margin: 0px;
+}
+
+// #s
+#about {
+    padding-top: $content_panding;
+    padding-bottom: $content_panding;
+}
+
+#work {
+    padding-top: $content_panding;
+    padding-bottom: $content_panding;
+}
+
+#contact {
+    padding-top: $content_panding;
+    padding-bottom: $content_panding;
+}
+
+#page_header {
+    padding-bottom: 10px;
+}

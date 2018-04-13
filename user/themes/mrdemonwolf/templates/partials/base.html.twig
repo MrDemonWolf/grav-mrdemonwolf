@@ -1,0 +1,120 @@
+{% set theme_config = attribute(config.themes, config.system.pages.theme) %}
+<!DOCTYPE html>
+<html lang="{{ grav.language.getActive ?: theme_config.default_lang }}">
+    <head>
+        {% block head %}
+            <meta charset="utf-8"/>
+            <title>
+                {% if header.title %}{{ header.title|e('html') }}
+                    |
+                {% endif %}{{ site.title|e('html') }}</title>
+
+            <meta http-equiv="X-UA-Compatible" content="IE=edge">
+            <meta name="viewport" content="width=device-width, initial-scale=1">
+            {% include 'partials/metadata.html.twig' %}
+
+            <link rel="icon" type="image/png" href="{{ url('theme://images/logo.png') }}"/>
+            <link rel="canonical" href="{{ page.url(true, true) }}"/>
+
+            {% block stylesheets %}
+                {# Loading CSS #}
+                {# Boostrap CSS #}
+                {% do 
+                    assets.addCss('theme://lib/bootstrap/css/bootstrap.min.css', 100) %}
+                {# Main CSS #}
+                {% do 
+                    assets.addCss('theme://css/main.css', 100) %}
+                {% do 
+                    assets.addCss('theme://lib/fancybox/css/fancybox.min.css', 100) %}
+
+            {% endblock %}
+            {{ assets.css() }}
+
+            {% block javascripts %}
+                {# Loading JS #}
+                {# Jqery #}
+                {% do 
+                    assets.addJs('theme://lib/jquery/js/jquery.min.js', 100) %}
+                {# Bootstrap Javascript #}
+                {% do 
+                    assets.addJs('theme://lib/bootstrap/js/bootstrap.min.js', 99) %}
+                {# Lettering.js #}
+                {% do 
+                    assets.addJs('theme://lib/letteringjs/js/jqery.lettering.js', 98) %}
+                {# Fancybox #}
+                {% do 
+                    assets.addJs('theme://lib/fancybox/js/jquery.fancybox.min.js', 97) %}
+                <!-- Bootstrap Vaildator -->
+                {# <script type="text/javascript" src="{{ site.subpath }}/assets/lib/bootstrap-validator/js/validator.min.js"></script>
+                <!-- Custom -->
+                <script type="text/javascript" src="{{ site.subpath }}/assets/js/main.js"></script>  #}
+            {% endblock %}
+            {{ assets.js() }}
+
+        {% endblock head%}
+    </head>
+    <body id="top" class="{{ page.header.body_classes }}">
+
+        {% block header %}
+            <div class="header">
+                <div class="wrapper padding">
+                    <a class="logo left" href="{{ base_url == '' ? '/' : base_url }}">
+                        <i class="fa fa-rebel"></i>
+                        {{ config.site.title }}
+                    </a>
+                    {% block header_navigation %}
+                        <nav class="main-nav">
+                            {% include 'partials/navigation.html.twig' %}
+                        </nav>
+                    {% endblock %}
+                </div>
+            </div>
+        {% endblock %}
+
+        {% block body %}
+            <section id="body">
+                <div class="wrapper padding">
+                    {% block content %}{% endblock %}
+                </div>
+            </section>
+        {% endblock %}
+
+        {% block footer %}
+            <div class="copyright">
+                <div class="container">
+                    <div class="col-md-4 col-sm-12">
+                        <div class="footer-content">
+                            Copyright ©
+                            <script>
+                                document.write(new Date().getFullYear());
+                            </script>
+                            <a href="{{ base_url_absolute }}">{{ site.title }}</a>
+                        </div>
+                    </div>
+                    <div class="col-md-2 col-sm-12">
+                        <div class="footer-content">
+                            <a href="{{ base_url_absolute }}/legal/privacy-statement/">Privacy Statement</a>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-sm-12 footer-social ">
+                        <ul class="ul-np">
+                            {% for item in config.theme.social %}
+                                <li>
+                                    <a href="{{ item.url }}">
+                                        <i class="fab {{ item.icon }} social-icon {{ item.color }}" aria-hidden="true"></i>
+                                    </a>
+                                </li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    {% endblock %}
+
+    {% block bottom %}
+        {{ assets.js('bottom') }}
+    {% endblock %}
+
+</body>
+</html>

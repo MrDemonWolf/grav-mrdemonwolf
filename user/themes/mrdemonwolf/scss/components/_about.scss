@@ -1,0 +1,37 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the about component.
+// -----------------------------------------------------------------------------
+.profile_pic {
+    @extend .img-circle;
+
+    width: 75%;
+    height: 75%;
+    display: flex;
+    justify-content: center;
+    margin: 0px auto;
+    background-color: $profile_pic-bg;
+}
+
+.about_text {
+    font-family: $main-font;
+    font-size: 1.5em;
+    font-style: normal;
+    a:hover {
+      text-decoration: none;
+    }
+}
+
+@media (max-width: 991px) {
+    .about_text {
+        padding-top: 2em;
+        margin-left: 1em;
+        margin-right: 1em;
+    }
+
+    .profile_pic {
+        width: 40%;
+        height: 40%;
+        float: none;
+        margin: 0 auto;
+    }
+}
