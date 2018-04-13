@@ -6,7 +6,7 @@
             <meta charset="utf-8"/>
             <title>
                 {% if header.title %}{{ header.title|e('html') }}
-                    |
+                    -
                 {% endif %}{{ site.title|e('html') }}</title>
 
             <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -17,58 +17,67 @@
             <link rel="canonical" href="{{ page.url(true, true) }}"/>
 
             {% block stylesheets %}
-                {# Loading CSS #}
+
                 {# Boostrap CSS #}
                 {% do 
                     assets.addCss('theme://lib/bootstrap/css/bootstrap.min.css', 100) %}
+                {# Fancybox CSS #}
+                {% do 
+                    assets.addCss('theme://lib/fancybox/css/fancybox.min.css', 100) %}
+                {# Narmailze CSS #}
+                {% do 
+                    assets.addCss('theme://lib/normalize/css/normalize.css', 100) %}
+                {# Narmailze CSS #}
+                {% do 
+                    assets.addCss('theme://lib/cookieconsent/css/cookieconsent.min.css', 100) %}
+                {# Jplay Blue monday Skin CSS #}
+                {% do 
+                    assets.addCss('theme://lib/jplayer/skin/blue.monday/css/jplayer.blue.monday.min.css', 100) %}
+                {# Font Awsome CSS #}
+                {% do 
+                    assets.addCss('theme://lib/font-awesome/css/fontawesome-all.min.css', 100) %}
                 {# Main CSS #}
                 {% do 
                     assets.addCss('theme://css/main.css', 100) %}
-                {% do 
-                    assets.addCss('theme://lib/fancybox/css/fancybox.min.css', 100) %}
-
             {% endblock %}
             {{ assets.css() }}
 
             {% block javascripts %}
-                {# Loading JS #}
-                {# Jqery #}
+                {# Jqery JS #}
                 {% do 
                     assets.addJs('theme://lib/jquery/js/jquery.min.js', 100) %}
-                {# Bootstrap Javascript #}
+                {# Bootstrap JS #}
                 {% do 
                     assets.addJs('theme://lib/bootstrap/js/bootstrap.min.js', 99) %}
-                {# Lettering.js #}
+                {# Lettering JS #}
                 {% do 
                     assets.addJs('theme://lib/letteringjs/js/jqery.lettering.js', 98) %}
-                {# Fancybox #}
+                {# Fancybox JS #}
                 {% do 
                     assets.addJs('theme://lib/fancybox/js/jquery.fancybox.min.js', 97) %}
-                <!-- Bootstrap Vaildator -->
-                {# <script type="text/javascript" src="{{ site.subpath }}/assets/lib/bootstrap-validator/js/validator.min.js"></script>
-                <!-- Custom -->
-                <script type="text/javascript" src="{{ site.subpath }}/assets/js/main.js"></script>  #}
+                {# Bootstrap Vaildator JS #}
+                {% do 
+                    assets.addJs('theme://lib/bootstrap-validator/js/validator.min.js', 96) %}
+                {# Cookie popup JS #}
+                {% do 
+                    assets.addJs('theme://lib/cookieconsent/js/cookieconsent.min.js', 95) %}
+                {# Jplayer JS #}
+                {% do 
+                    assets.addJs('theme://lib/jplayer/js/jquery.jplayer.min.js', 94) %}
+                {# Maiin JS #}
+                {% do 
+                    assets.addJs('theme://js/main.js', 93) %}
             {% endblock %}
             {{ assets.js() }}
 
+            {# Google Analytics #}
+            {% include 'partials/google-analytics.html.twig' %}
         {% endblock head%}
     </head>
     <body id="top" class="{{ page.header.body_classes }}">
 
-        {% block header %}
-            <div class="header">
-                <div class="wrapper padding">
-                    <a class="logo left" href="{{ base_url == '' ? '/' : base_url }}">
-                        <i class="fa fa-rebel"></i>
-                        {{ config.site.title }}
-                    </a>
-                    {% block header_navigation %}
-                        <nav class="main-nav">
-                            {% include 'partials/navigation.html.twig' %}
-                        </nav>
-                    {% endblock %}
-                </div>
-            </div>
+        {% block header_navigation %}
+            {% include 'partials/navigation.html.twig' %}
         {% endblock %}
 
         {% block body %}
@@ -80,7 +89,7 @@
         {% endblock %}
 
         {% block footer %}
-            <div class="copyright">
+            <footer>
                 <div class="container">
                     <div class="col-md-4 col-sm-12">
                         <div class="footer-content">
@@ -108,13 +117,12 @@
                         </ul>
                     </div>
                 </div>
-            </div>
-        </footer>
-    {% endblock %}
+            </footer>
+        {% endblock %}
 
-    {% block bottom %}
-        {{ assets.js('bottom') }}
-    {% endblock %}
+        {% block bottom %}
+            {{ assets.js('bottom') }}
+        {% endblock %}
 
-</body>
+    </body>
 </html>
