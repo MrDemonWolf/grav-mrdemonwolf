@@ -1,0 +1,58 @@
+{% extends 'partials/base.html.twig' %}
+{% block content %}
+    <div class="container work">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="title">
+                    {{ page.header.work_title }}
+                </div>
+                <hr class="line">
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="header">
+                        Start Date
+                    </div>
+                    <div class="date">
+                        {{ page.header.work_start_date }}
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="header">
+                        End Date
+                    </div>
+                    <div class="date">
+                        {{ page.header.work_end_date }}
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="header">
+                        Colors
+                    </div>
+                    <div>
+                        <img class="img-responsive colors" alt="{{ page.header.work_title }} Work Colors" src="{{ site.subpath }}/assets/images/work/{{ page.work_name }}/{{ page.work_colors }}"/>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="list-group gallery">
+                    {% for item in page.header.work_images %}
+                        <div class='col-xs-12 col-md-4'>
+                            <div class='text-right'>
+                                <div class='text-muted work-name'>{{ item.title }}</div>
+                            </div>
+                            <a class="thumbnail fancybox" rel="ligthbox" href="{{ site.subpath }}/assets/images/work/{{ page.work_name }}/{{ item.picture }}">
+                                <img class="img-responsive" alt="{{ item.name }} Project" src="{{ site.subpath }}/assets/images/work/{{ page.work_name }}/{{ item.picture }}"/>
+                            </a>
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

@@ -1,0 +1,13 @@
+{% extends 'partials/base.html.twig' %}
+{% block content %}
+    <div>
+        <div class="container">
+            <div class="legal-text">
+                <p>
+                    <span class="last-modified">This was last modified on
+                        {{ page.date | date('Y-m-d') }}.</span></p>
+                {{ page.content }}
+            </div>
+        </div>
+    </div>
+{% endblock %}

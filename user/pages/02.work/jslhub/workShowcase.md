@@ -1,0 +1,12 @@
+---
+title: JSL Hub
+work_title: JSLHub
+work_name: jslhub
+work_start_date: N/A
+work_end_date: N/A
+work_colors: colors.png
+work_images:
+- {title: 'Landing Page', picture: 'landing_page.png'}
+- {title: 'Mod Mode', picture: 'mod_mode_page.png'}
+- {title: 'Live Stream', picture: 'live_stream_page.png'}
+---

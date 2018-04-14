@@ -1,4 +1,6 @@
 ---
+title: Contact
+menu: contact
 contact:
     -
         title: Want to hire me for your next project?
