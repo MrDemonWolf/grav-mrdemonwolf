@@ -1,0 +1,21 @@
+<!-- Examples of my past work -->
+<div class="container" id="examples">
+    <div class="row">
+        <h1 class="landing_header">{{ page.header.header }}</h1>
+        <div class='list-group gallery'>
+            {% for examples in page.header.examples %}
+                {% set image = page.media[examples.src].quality(100) %}
+                {% set image_url = image.url %}
+                <div class='col-xl-4 col-md-4 col-sm-12 col-xs-12'>
+                    <div class="image-hovereffect">
+                        <img class="img-responsive" alt="{{ examples.title }} Project" src="{{ image_url }}"/>
+                        <div class="overlay">
+                            <div class=" project-name">{{ examples.title }}</div>
+                            <a href="{{ site.subpath }}/work/{{ item.url }}" class="project-page">View</a>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>

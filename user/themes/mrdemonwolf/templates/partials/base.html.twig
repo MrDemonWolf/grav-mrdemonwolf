@@ -75,7 +75,7 @@
         {% endblock head%}
     </head>
     <body id="top" class="{{ page.header.body_classes }}">
-
+        {% include 'partials/twitchBanner.html.twig' %}
         {% block header_navigation %}
             {% include 'partials/navigation.html.twig' %}
         {% endblock %}
@@ -107,7 +107,7 @@
                     </div>
                     <div class="col-md-6 col-sm-12 footer-social ">
                         <ul class="ul-np">
-                            {% for item in config.theme.social %}
+                            {% for item in config.site.social %}
                                 <li>
                                     <a href="{{ item.url }}">
                                         <i class="fab {{ item.icon }} social-icon {{ item.color }}" aria-hidden="true"></i>
