@@ -1,6 +1,6 @@
 ---
-title: 'Homepage Hero'
-menu: Top
+title: Home
+menu: Home
 hero:
     - 
         title: Nathan Henniges is a
