@@ -48,7 +48,7 @@
                     assets.addJs('theme://lib/jquery/js/jquery.min.js', 100) %}
                 {# Bootstrap JS #}
                 {% do 
-                    assets.addJs('theme://lib/bootstrap/js/bootstrap.min.js', 99) %}
+                    assets.addJs('theme://lib/bootstrap/js/bootstrap.bundle.min.js', 99) %}
                 {# Lettering JS #}
                 {% do 
                     assets.addJs('theme://lib/letteringjs/js/jqery.lettering.js', 98) %}
@@ -92,38 +92,23 @@
         {% block footer %}
             <footer>
                 <div class="container">
-                    <div class="col-md-4 col-sm-12">
-                        <div class="footer-content">
+                    <div class="col-md-12">
+                        <div class="footer-content text-centered">
                             Copyright ©
                             <script>
                                 document.write(new Date().getFullYear());
                             </script>
                             <a href="{{ base_url_absolute }}">{{ site.title }}</a>
-                        </div>
-                    </div>
-                    <div class="col-md-2 col-sm-12">
-                        <div class="footer-content">
+                            |
                             <a href="{{ base_url_absolute }}/legal/privacy-statement/">Privacy Statement</a>
                         </div>
                     </div>
-                    <div class="col-md-6 col-sm-12 footer-social ">
-                        <ul class="ul-np">
-                            {% for item in config.site.social %}
-                                <li>
-                                    <a href="{{ item.url }}">
-                                        <i class="fab {{ item.icon }} social-icon {{ item.color }}" aria-hidden="true"></i>
-                                    </a>
-                                </li>
-                            {% endfor %}
-                        </ul>
-                    </div>
-                </div>
-            </footer>
-        {% endblock %}
+                </footer>
+            {% endblock %}
 
-        {% block bottom %}
-            {{ assets.js('bottom') }}
-        {% endblock %}
+            {% block bottom %}
+                {{ assets.js('bottom') }}
+            {% endblock %}
 
-    </body>
-</html>
+        </body>
+    </html>

@@ -1,3 +1,32 @@
 {% extends 'partials/base.html.twig' %}
 {% block content %}
+    <!--Hero -->
+    <div class="hero">
+        <div class="container">
+            <div class="text-center">
+                <div class="row">
+                    <div class="inner-hero">
+                        {% for hero in page.header.hero %}
+                            <div class="text">{{ hero.title }}</div>
+                        {% endfor %}
+                        <div class="animate-text">
+                            {% for isa in page.header.isa %}
+                                <span>{{ isa.name }}</span>{% endfor %}
+                        </div>
+                        <div class="hero-social">
+                            <ul class="ul-np">
+                                {% for item in config.site.social %}
+                                    <li>
+                                        <a href="{{ item.url }}">
+                                            <i class="fab {{ item.icon }} social-icon {{ item.color }}" aria-hidden="true"></i>
+                                        </a>
+                                    </li>
+                                {% endfor %}
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 {% endblock %}

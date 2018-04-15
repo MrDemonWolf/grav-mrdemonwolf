@@ -5,10 +5,21 @@
     color: white;
     background: url(../images/hero_bg.png) no-repeat bottom center;
     background-size: cover;
-    height: 100%;
+    height: 85vh;
     padding-top: 27px;
     padding-bottom: 27px;
     margin: 0;
+    position: relative;
+
+    .inner-hero {
+        background-color: transparent !important;
+        padding-top: 27px;
+        padding-bottom: 27px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
 
     .text {
         color: #ffffff;
@@ -16,12 +27,6 @@
         font-size: 3.15em;
         display: inline-block;
         margin: 0;
-    }
-
-    .inner-hero {
-        background-color: transparent !important;
-        padding-top: 20px;
-        padding-bottom: 20px;
     }
 
     .animate-text {
@@ -65,8 +70,27 @@
         }
     }
 
-    .cta-button {
-        padding-bottom: 15px;
+    .hero-social {
+        li {
+            float: right;
+            display: flex;
+        }
+
+        .social-icon {
+            width: 40px;
+            height: 40px;
+            font-size: 24px;
+            // background-color: $social-icon;
+            text-align: center;
+            margin-right: 10px;
+            padding-top: 8px;
+            border-radius: 50%;
+
+            &:hover {
+                background-color: $social-icon;
+                transition: 500ms;
+            }
+        }
     }
 }
 
