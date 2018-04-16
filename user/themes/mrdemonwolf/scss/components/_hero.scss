@@ -5,7 +5,10 @@
     color: white;
     background: url(../images/hero_bg.png) no-repeat bottom center;
     background-size: cover;
-    height: 85vh;
+    width: 100%;
+    height: 100vh;
+    max-height: 100vw;
+    display: inline-flex;
     padding-top: 27px;
     padding-bottom: 27px;
     margin: 0;
@@ -32,7 +35,6 @@
     .animate-text {
         font-family: $main-font;
         font-size: 2.15em;
-        flex-wrap: wrap;
         display: flex;
         justify-content: center;
 
@@ -71,6 +73,10 @@
     }
 
     .hero-social {
+        padding-top: 4em;
+        display: flex;
+        justify-content: center;
+
         li {
             float: right;
             display: flex;
@@ -80,14 +86,15 @@
             width: 40px;
             height: 40px;
             font-size: 24px;
-            // background-color: $social-icon;
+            background-color: $social-icon;
             text-align: center;
             margin-right: 10px;
             padding-top: 8px;
             border-radius: 50%;
 
             &:hover {
-                background-color: $social-icon;
+                background-color: $social-icon_hover;
+                color: #ffffff !important;
                 transition: 500ms;
             }
         }

@@ -1,22 +1,9 @@
 {% for twitch in config.site.twitchbanner %}
-    <div class="twitchBanner hidden" id="twitchBanner">
-        <div class="container">
-            <a class="link" href="https://www.twitch.tv/{{ twitch.username }}" id="twitchBanner" target="_blank">
-                <div class="text text-center">Currently Live! Click to view the live stream.
-                    <div class="icon">
-                        <i class="fab fa-twitch pulsing icon" aria-hidden="true"></i>
-                    </div>
-                </div>
-            </a>
-            <i class="fas fa-times close-notice" aria-hidden="true"></i>
-        </div>
-    </div>
     <script>
         // Twitch Banner
         (function () {
             var username,
-                api_key,
-                twitchBanner;
+                api_key;
             // Infos
             username = '{{ twitch.username }}';
             api_key = '{{ twitch.apikey }}';
@@ -24,7 +11,7 @@
 
             $.getJSON('https://api.twitch.tv/kraken/streams/' + username + '?client_id=' + api_key + '&callback=?', function (data) {
                 if (data.stream) {
-                    twitchBanner.removeClass('hidden');
+                    $.notify("Hello World");
                 }
             });
         })();

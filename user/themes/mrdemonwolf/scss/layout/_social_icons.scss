@@ -4,7 +4,7 @@
 .twitter-color {
     color: $twitter-color;
 
-    &:hover {
+    &.effect:hover {
         color: darken($twitter_color, 10%);
         transition: all 3s;
     }
@@ -13,7 +13,7 @@
 .youtube-color {
     color: $google_plus-color;
 
-    &:hover {
+    &.effect:hover {
         color: darken($google_plus-color, 10%);
         transition: all 3s;
     }
@@ -22,7 +22,7 @@
 .google_plus-color {
     color: $google_plus-color;
 
-    &:hover {
+    &.effect:hover {
         color: darken($google_plus-color, 10%);
         transition: all 3s;
     }
@@ -31,7 +31,7 @@
 .twitch-color {
     color: $twitch-color;
 
-    &:hover {
+    &.effect:hover {
         color: darken($twitch-color, 10%);
         transition: all 3s;
     }
@@ -40,17 +40,8 @@
 .github-color {
     color: $github-color;
 
-    &:hover {
+    &.effect:hover {
         color: darken($github-color, 10%);
-        transition: all 3s;
-    }
-}
-
-.facebook-color {
-    color: $facebook-color;
-
-    &:hover {
-        color: darken($facebook-color, 10%);
         transition: all 3s;
     }
 }
@@ -58,7 +49,7 @@
 .spotify-color {
     color: $spotify-color;
 
-    &:hover {
+    &.effect:hover {
         color: darken($spotify-color, 10%);
         transition: all 3s;
     }
@@ -67,17 +58,8 @@
 .linkedin-color {
     color: $linkedin-color;
 
-    &:hover {
+    &.effect:hover {
         color: darken($linkedin-color, 10%);
-        transition: all 3s;
-    }
-}
-
-.behance-color {
-    color: $behance-color;
-
-    &:hover {
-        color: darken($behance-color, 10%);
         transition: all 3s;
     }
 }
@@ -86,7 +68,7 @@
 .twitter-color_background {
     background-color: $twitter-color;
 
-    &:hover {
+    &.effect:hover {
         background-color: darken($twitter_color, 10%);
     }
 }
@@ -94,7 +76,7 @@
 .youtube-color_background {
     background-color: $google_plus-color;
 
-    &:hover {
+    &.effect:hover {
         background-color: darken($google_plus-color, 10%);
     }
 }
@@ -102,7 +84,7 @@
 .google-plus-color_background {
     background-color: $google-plus-color;
 
-    &:hover {
+    &.effect:hover {
         background-color: darken($google-plus-color, 10%);
     }
 }
@@ -110,7 +92,7 @@
 .twitch-color_background {
     background-color: $twitch-color;
 
-    &:hover {
+    &.effect:hover {
         background-color: darken($twitch-color, 10%);
     }
 }
@@ -118,38 +100,23 @@
 .github-color_background {
     background-color: $github-color;
 
-    &:hover {
+    &.effect:hover {
         background-color: darken($github-color, 10%);
-    }
-}
-
-.facebook-color_background {
-    background-color: $facebook-color;
-
-    &:hover {
-        background-color: darken($facebook-color, 10%);
     }
 }
 
 .spotify-color_background {
     background-color: $spotify-color;
 
-    &:hover {
+    &.effect:hover {
         background-color: darken($spotify-color, 10%);
     }
 }
 
-.behance-color_background {
-    background-color: $behance-color;
-
-    &:hover {
-        background-color: darken($behance-color, 10%);
-    }
-}
 .linkedin-color_background {
     background-color: $linkedin-color;
 
-    &:hover {
+    &.effect:hover {
         background-color: darken($linkedin-color, 10%);
     }
 }

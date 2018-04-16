@@ -4,6 +4,7 @@ menu: Home
 hero:
     - 
         title: Nathan Henniges is a
+        src: hero_bg.png
 isa: 
     - 
         name: Front-end Developer
