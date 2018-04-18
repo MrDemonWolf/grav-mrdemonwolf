@@ -22,22 +22,21 @@
 //     $(document).click(function (event) {
 //         $('.navbar-collapse').collapse('hide');
 //     });
-// });
+// });.
 // Contact us effect for when clicked into the form.
-$('.js-input').keyup(function () {
-    if ($(this).val()) {
-        $(this).addClass('not-empty');
-    } else {
-        $(this).removeClass('not-empty');
-    }
-});
 $(document).ready(function () {
+    $('.js-input').keyup(function () {
+        if ($(this).val()) {
+            $(this).addClass('not-empty');
+        } else {
+            $(this).removeClass('not-empty');
+        }
+    });
     // Fancy Box loading.
     $(".fancybox").fancybox({
         openEffect: "none",
         closeEffect: "none"
     });
-
     // Gallery
     $(".showcase_filter-button").click(function () {
         var value = $(this).attr('data-filter');
@@ -63,7 +62,4 @@ $(document).ready(function () {
         $("#cookieConsent").fadeOut(200);
     });
 
-    $('.close-notice').on('click', function (c) {
-        $('#twitchBanner').fadeOut('fast', function (c) {})
-    })
 });

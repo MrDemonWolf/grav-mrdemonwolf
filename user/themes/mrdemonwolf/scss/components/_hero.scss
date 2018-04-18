@@ -87,7 +87,8 @@
             font-size: 24px;
             background-color: $social-icon;
             text-align: center;
-            margin-right: 10px;
+            margin-right: 18px;
+            margin-bottom: 18px;
             padding-top: 8px;
             border-radius: 50%;
 
@@ -131,5 +132,31 @@
 
     100% {
         opacity: 0;
+    }
+}
+
+@media (max-width: 776px) {
+    .hero {
+        .hero-social {
+            ul {
+                padding-left: 0;
+
+                li {
+                    float: left;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 611px) {
+    .hero {
+        .animate-text {
+            justify-content: left;
+        }
+
+        .hero-social {
+            padding-top: 6em;
+        }
     }
 }

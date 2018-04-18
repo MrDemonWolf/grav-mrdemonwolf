@@ -2,28 +2,32 @@
 {% block content %}
     {% for contact in page.header.contact %}
         <!-- Contact -->
-        <div id="contact" class="contact">
-            <div class="container">
-                <div class="row">
-                    <div class="col-12">
-                        <div class="get-in-touch">
-                            <h3 class="title">{{ contact.title }}</h3>
-                            <form class="contact-form row row-contact" action="https://formspree.io/{{ contact.email }}" method="POST">
-                                {% for form in page.header.form %}
-                                    <div class="form-field form-col {{ form.col }}">
-                                        <input id="{{ form.id }}" class="input-text js-input" type="{{ form.type }}" name="{{ form.name }}" {% if form.required %} required="required" {% endif %}>
-                                        <label class="{{ form.labelClass }}" for="{{ form.id }}">{{ form.label }}</label>
-                                    </div>
-                                {% endfor %}
-                                <div class="form-field form-col x-100 btn-center">
-                                    <input class="btn btn-primary btn-lg btn-cta" type="submit" value="Send">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="get-in-touch">
+                        <h3 class="title">{{ contact.title }}</h3>
+                        <form class="contact-form row row-contact" action="https://formspree.io/{{ contact.email }}" method="POST">
+                            {% for info in page.header.form.info %}
+                                <div class="form-field form-col {{ info.col }}">
+                                    <input id="{{ info.id }}" class="input-text js-input" type="{{ info.type }}" name="{{ foinfom.name }}" {% if info.required %} required="required" {% endif %}>
+                                    <label class="{{ info.labelClass }}" for="{{ info.id }}">{{ info.label }}</label>
                                 </div>
-                            </form>
-                        </div>
+                            {% endfor %}
+                            {% for message in page.header.form.message %}
+                                <div class="form-field form-col col-12">
+                                    <textarea id="{{ message.id }}" rows="10" cols="30" class="input-text js-input" type="{{ message.type }}" name="{{ message.name }}" data-gramm_editor="false" {% if message.required %} required="required" {% endif %}></textarea>
+                                    <label class="{{ message.labelClass }}" for="{{ form.id }}">{{ message.label }}</label>
+                                </div>
+                            {% endfor %}
+                            <div class="form-field form-col x-100 btn-center">
+                                <input class="btn btn-primary btn-lg btn-cta" type="submit" value="Send">
+                            </div>
+                        </form>
                     </div>
                 </div>
             </div>
         </div>
-
-    {% endfor %}
+    </div>
+{% endfor %}
 {% endblock %}

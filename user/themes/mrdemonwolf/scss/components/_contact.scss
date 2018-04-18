@@ -1,28 +1,21 @@
 // -----------------------------------------------------------------------------
 // This file contains all styles related to the contact component.
 // -----------------------------------------------------------------------------
-.contact {
-    background-color: #25aae1;
-}
+.contact {}
 
 #message {
-    height: 100px;
+    height: 100%;
 }
 
 .message {
     &.label {
         top: 1px;
-        bottom: clear;
     }
 }
 
 .content-wrapper {
     min-height: 100%;
     position: relative;
-}
-
-.align-center {
-    text-align: center;
 }
 
 .row-contact {
@@ -56,7 +49,7 @@
 
     .title {
         font-family: $main-font;
-        color: #ffffff;
+        color: $brand-color-alt;
         text-align: center;
         text-transform: uppercase;
         font-weight: 700;
@@ -87,9 +80,9 @@
     }
 }
 
-.contact-form .input-text:focus + .label, .contact-form .input-text.not-empty + .label {
+.contact-form .input-text:focus + .label, .contact-form .input-text.not-empty + .label, .contact-form #message:focus + .label, .contact-form .not-empty + .label {
     transform: translateY(-32px);
-    color: #ffffff;
+    color: #000000;
     transition: 500ms;
 }
 
