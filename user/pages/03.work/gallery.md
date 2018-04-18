@@ -1,5 +1,9 @@
 ---
-page_header: Past work
+title: Work
+menu: Work
+header: 
+    enabled: true
+    title: Past work
 galleryFliter:
     -
         title: All

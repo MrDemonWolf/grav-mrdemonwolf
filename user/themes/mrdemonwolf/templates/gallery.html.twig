@@ -3,29 +3,30 @@
     <!-- Gallery -->
     <div class="container showcase_gallery">
         <div class="row">
-            <div class="gallery col-lg-12 col-md-12 col-sm-12 col-xs-12">
+            <div class="gallery col-12">
                 <div align="center" class="showcase_filter">
                     {% for galleryFliter in page.header.galleryFliter %}
                         <button class="btn btn-default showcase_filter-button" data-filter="{{ galleryFliter.name }}">{{ galleryFliter.title}}</button>
                     {% endfor %}
                 </div>
-                <br/>
             </div>
         </div>
         <div class="container">
-            {% for galleryThumbnails in page.header.galleryThumbnails %}
-                {% set image = page.media[galleryThumbnails.src].quality(100) %}
-                {% set image_url = image.url %}
-                <div class="product col-lg-4 col-md-4 col-sm-12 col-xs-12 filter {{ galleryThumbnails.fliter }}">
-                    <div class="image-hovereffect">
-                        <img src="{{ image_url }}" class="img-responsive">
-                        <div class="overlay">
-                            <div class="project-name">{{ galleryThumbnails.title }}</div>
-                            <a href="{{ base_url_absolute }}/{{ galleryThumbnails.urlPath }}/{{ galleryThumbnails.url }}" class="project-page">View</a>
+            <div class="row">
+                {% for galleryThumbnails in page.header.galleryThumbnails %}
+                    {% set image = page.media[galleryThumbnails.src].quality(100) %}
+                    {% set image_url = image.url %}
+                    <div class="product col-lg-4 col-12 filter {{ galleryThumbnails.fliter }}">
+                        <div class="image-hovereffect">
+                            <img src="{{ image_url }}" class="img-thumbnail">
+                            <div class="overlay">
+                                <div class="project-name">{{ galleryThumbnails.title }}</div>
+                                <a href="{{ base_url_absolute }}/{{ galleryThumbnails.urlPath }}/{{ galleryThumbnails.url }}" class="project-page">View</a>
+                            </div>
                         </div>
                     </div>
-                </div>
-            {% endfor %}
+                {% endfor %}
+            </div>
         </div>
     </div>
 {% endblock %}

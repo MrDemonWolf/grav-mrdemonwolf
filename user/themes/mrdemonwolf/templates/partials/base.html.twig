@@ -78,7 +78,7 @@
         {% endblock head%}
     </head>
     <body id="top" class="{{ page.header.body_classes }}">
-        {% include 'partials/twitchBanner.html.twig' %}
+        {% include 'partials/twitchNotice.html.twig' %}
         {% include 'partials/cookie-notice.html.twig' %}
         {% block header_navigation %}
             {% include 'partials/navigation.html.twig' %}
@@ -87,11 +87,32 @@
         {% block body %}
             <section id="body">
                 <div class="wrapper padding">
+                    {% if page.header.header.enabled %}
+                        {% include 'partials/page-header.html.twig' %}
+                    {% endif %}
                     {% block content %}{% endblock %}
                 </div>
             </section>
         {% endblock %}
-
+        {% if page.home == false %}
+            {% block footer %}
+                <footer>
+                    <div class="container">
+                        <div class="col-md-12">
+                            <div class="content text-center">
+                                Copyright ©
+                                <script>
+                                    document.write(new Date().getFullYear());
+                                </script>
+                                <a href="{{ base_url_absolute }}">{{ site.title }}</a>
+                                |
+                                <a href="{{ base_url_absolute }}/legal/">Privacy Statement</a>
+                            </div>
+                        </div>
+                    </div>
+                </footer>
+            {% endblock %}
+        {% endif %}
         {% block bottom %}
             {{ assets.js('bottom') }}
         {% endblock %}

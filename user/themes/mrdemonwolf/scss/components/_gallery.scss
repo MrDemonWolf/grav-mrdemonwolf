@@ -2,8 +2,9 @@
 // This file contains all styles related to the showcase gallery component.
 // -----------------------------------------------------------------------------
 .showcase_gallery {
-  padding-top: $content_panding;
-  padding-bottom: $content_panding;
+    padding-top: $content_panding;
+    padding-bottom: $content_panding;
+
     .gallery {
         display: inline-block;
     }
@@ -63,6 +64,10 @@
         display: block;
         position: relative;
         transition: all 0.4s ease-in;
+        padding: 0px;
+        background-color: transparent;
+        border: none;
+        border-radius: none;
     }
 
     &:hover img {
@@ -92,6 +97,7 @@
         background-color: transparent;
         font-family: $main-font;
         font-weight: 700;
+
         &:hover {
             box-shadow: 0 0 5px #fff;
         }
