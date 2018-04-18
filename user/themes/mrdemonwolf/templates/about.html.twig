@@ -1,18 +1,35 @@
 {% extends 'partials/base.html.twig' %}
 {% block content %}
+    <script>
+        $(document).ready(function getRadioData() {
+            var date = '06301997'
+            var age = moment().diff(moment(date, 'MMDDYYYY'), 'years');
+            $('#age').text(`Age: ${age}`);
+        });
+    </script>
     <!-- About me -->
     <div class="container" id="about">
         <div class="row">
-            <div class="col-md-4">
+            <div class="col-lg-3 col-12">
                 {% for picture in page.header.picture %}
                     {% set image = page.media[picture.src].quality(100) %}
                     {% set image_url = image.url %}
-                    <img src="{{ image_url }}" alt="{{ config.site.name}} picture" class="profile_pic">
+                    <img src="{{ image_url }}" alt="{{ config.site.name}} picture" class="img-thumbnail profile_pic">
                 {% endfor %}
+                <div class="name">Name:
+                    {{ config.site.author.name }}</div>
+                <div class="location">Location:
+                    {{ config.site.author.location }}</div>
+                <div class="age" id="age"></div>
+                <div class="email">
+                    {{ config.site.author.email | safe_email}}</div>
+                <div class="phone">
+                    {{ config.site.author.phone }}</div>
+
             </div>
-            <div class="col-md-7">
-                <div class="about_text">
-                    {% for section in page.header.about %}
+            <div class="col-md-8">
+                <div class="text">
+                    {% for section in page.header.about.text %}
                         <p>{{ section | textilize }}</p>
                     {% endfor %}
                 </div>
