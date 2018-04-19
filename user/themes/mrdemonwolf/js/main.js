@@ -37,24 +37,6 @@ $(document).ready(function () {
         openEffect: "none",
         closeEffect: "none"
     });
-    // Gallery
-    $(".showcase_filter-button").click(function () {
-        var value = $(this).attr('data-filter');
-
-        if (value == "all") {
-            $('.filter').show('1000');
-        } else {
-            $(".filter").not('.' + value).hide('3000');
-            $('.filter').filter('.' + value).show('3000');
-
-        }
-    });
-
-    if ($(".showcase_gallery_filter-button").removeClass("active")) {
-        $(this).removeClass("active");
-    }
-    $(this).addClass("active");
-
     setTimeout(function () {
         $("#cookieConsent").fadeIn(200);
     }, 4000);

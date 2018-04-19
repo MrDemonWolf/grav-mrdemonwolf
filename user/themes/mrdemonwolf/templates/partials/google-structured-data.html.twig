@@ -1,0 +1,23 @@
+<script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "{{ config.site.author.type }}",
+        "name": "{{ site.title}}",
+        "mainEntityOfPage": "{{ base_url_absolute }}",
+        "url": "{{ base_url_absolute }}",
+        "sameAs": [
+            {% for item in config.site.social %}"{{ item.url }}"{% if loop.last == false %},{% endif %}{% endfor %}
+        ],
+        "email": "{{ config.site.author.email }}",
+        "foundingDate": "{{ config.site.author.foundingDate }}",
+        "foundingLocation": "{{ config.site.author.location }}",
+        "member": {
+            "@type": "Person",
+            "name": "{{ config.site.author.name }}",
+            "jobTitle": "{ config.site.author.name }}",
+            "nationality": "{{ config.site.author.nationality }}",
+            "url": "{{ config.site.author.url }}"
+        },
+        "logo": "{{ base_url_absolute }}{{ url('theme://images/logos/logo.png') }}"
+    }
+</script>

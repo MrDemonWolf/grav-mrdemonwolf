@@ -32,23 +32,38 @@
                         Colors
                     </div>
                     <div>
-                        <img class="img-responsive colors" alt="{{ page.header.work_title }} Work Colors" src="{{ site.subpath }}/assets/images/work/{{ page.work_name }}/{{ page.work_colors }}"/>
+                        {% set color = page.media[page.header.work_colors].quality(100) %}
+                        {% set color_url = color.url %}
+                        <img class="img-responsive colors" alt="{{ page.header.work_title }} Work Colors" src="{{ color_url }}"/>
                     </div>
                 </div>
             </div>
         </div>
         <div class="container">
-            <div class="row">
-                <div class="list-group gallery">
-                    {% for item in page.header.work_images %}
-                        <div class='col-xs-12 col-md-4'>
-                            <div class='text-right'>
-                                <div class='text-muted work-name'>{{ item.title }}</div>
+            <div class="list-group gallery">
+                <div class="row">
+                    {% for work_images in page.header.work_images %}
+                        {% set image = page.media[work_images.src].quality(100) %}
+                        {% set image_url = image.url %}
+                        {% if loop.first %}
+                            <div class="row">
+                                {# open row #}
+                            {% endif %}
+                            <div class="col-lg-4 col-12">
+                                <div class="text-right">
+                                    <div class="text-muted work-name">{{ work_images.title }}</div>
+                                </div>
+                                <a class="thumbnail fancybox" rel="ligthbox" href="{{ image_url }}">
+                                    <img class="img-fluid" alt="{{ work_images.name }} Project" src="{{ image_url }}">
+                                </a>
                             </div>
-                            <a class="thumbnail fancybox" rel="ligthbox" href="{{ site.subpath }}/assets/images/work/{{ page.work_name }}/{{ item.picture }}">
-                                <img class="img-responsive" alt="{{ item.name }} Project" src="{{ site.subpath }}/assets/images/work/{{ page.work_name }}/{{ item.picture }}"/>
-                            </a>
-                        </div>
+                            {% if loop.index % 3 == 0 %}
+                            </div>
+                            <div class="row">
+                            {% endif %}
+                            {% if loop.last %}
+                            </div>
+                        {% endif %}
                     {% endfor %}
                 </div>
             </div>

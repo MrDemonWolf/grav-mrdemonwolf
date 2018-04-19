@@ -1,3 +1,15 @@
+# v1.0.8
+## 04/16/2018
+
+1. [](#improved)
+   * Better documentation.
+
+# v1.0.7
+## 04/16/2018
+
+1. [](#improved)
+   * Better documentation.
+
 # v1.0.6
 ## 03/15/2018
 

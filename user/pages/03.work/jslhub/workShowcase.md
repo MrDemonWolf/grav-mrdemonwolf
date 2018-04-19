@@ -6,7 +6,13 @@ work_start_date: N/A
 work_end_date: N/A
 work_colors: colors.png
 work_images:
-- {title: 'Landing Page', picture: 'landing_page.png'}
-- {title: 'Mod Mode', picture: 'mod_mode_page.png'}
-- {title: 'Live Stream', picture: 'live_stream_page.png'}
+    - 
+        title: Landing Page
+        src: landing_page.png
+    - 
+        title: Mod Mode
+        src: mod_mode_page.png
+    - 
+        title: Live Stream
+        src: live_stream_page.png
 ---

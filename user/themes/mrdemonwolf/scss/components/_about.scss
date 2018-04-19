@@ -4,13 +4,15 @@
 #about {
     padding-top: $content_panding;
     padding-bottom: $content_panding;
+    
 
     .profile_pic {
         @extend .img-circle;
+
         max-width: 75%;
-        display: flex;
-        justify-content: center;
-        margin: 0px auto;
+        // display: flex;
+        // justify-content: center;
+        // margin: 0px auto;
         background-color: $profile_pic-bg;
     }
 
@@ -21,6 +23,18 @@
 
         a:hover {
             text-decoration: none;
+        }
+    }
+
+    .social {
+        font-size: 1.5em;
+
+        ul {
+            display: flex;
+            justify-items: center;
+            li {
+                padding-right: 8px;
+            }
         }
     }
 }

@@ -1,33 +1,38 @@
 ---
 title: Contact
-menu: contact
+menu: Contact
+body_classes: contact
+header: 
+    enabled: true
+    title: Contact Me
 contact:
     -
-        title: Want to hire me for your next project?
         email: demonwolf@demonwolfdev.com
 form:
-    -
-        col: x-50
-        type: text
-        name: name
-        labelClass: label
-        label: Name
-        id: name
-        required: true
-    -
-        col: x-50
-        type: text
-        name: _repltyo
-        labelClass: label
-        label: Email
-        id: email
-        required: true
-    -
-        col: x-100
-        type: text
-        name: _textarea
-        labelClass: message label
-        label: Your Message
-        id: message
-        required: true
+    info:
+        -
+            col: col-lg-6 col-12
+            type: text
+            name: name
+            labelClass: label
+            label: Name
+            id: name
+            required: true
+        -
+            col: col-lg-6 col-12
+            type: text
+            name: _repltyo
+            labelClass: label
+            label: Email
+            id: email
+            required: true
+    message:
+        -
+            col: col-12
+            type: textarea
+            name: _textarea
+            labelClass: message label
+            label: Your Message
+            id: message
+            required: true
 ---

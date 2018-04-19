@@ -19,25 +19,22 @@
         border-radius: 5px;
         text-align: center;
         color: $brand-color-alt;
+        background: #ffff;
 
         &:hover {
             font-size: 1.15em;
-            border: 1px solid $brand-color-alt;
+            border: 1px solid $brand-color;
             border-radius: 5px;
             text-align: center;
             color: #ffffff;
-            background-color: $brand-color-alt;
+            background-color: $brand-color;
         }
     }
 
-    .btn-default {
-        &:active {
-            .showcase_filter-button {
-                &:active {
-                    background-color: $brand-color-alt;
-                    color: #ffffff;
-                }
-            }
+    .showcase_filter-button {
+        &.active {
+            background-color: $brand-color;
+            color: #ffffff;
         }
     }
 }

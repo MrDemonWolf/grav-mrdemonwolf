@@ -1,7 +1,7 @@
 {% extends 'partials/base.html.twig' %}
 {% block content %}
     <script>
-        $(document).ready(function getRadioData() {
+        $(document).ready(function getAuthorAge() {
             var date = '06301997'
             var age = moment().diff(moment(date, 'MMDDYYYY'), 'years');
             $('#age').text(`Age: ${age}`);
@@ -22,10 +22,24 @@
                     {{ config.site.author.location }}</div>
                 <div class="age" id="age"></div>
                 <div class="email">
-                    {{ config.site.author.email | safe_email}}</div>
+                    <a href="mailto:{{ config.site.author.email | safe_email}}">
+                        {{ config.site.author.email | safe_email}}</a>
+                </div>
                 <div class="phone">
-                    {{ config.site.author.phone }}</div>
-
+                    <a href="tel:{{ config.site.author.phone }}">
+                        {{ config.site.author.phone }}</a>
+                </div>
+                <div class="social">
+                    {% for item in config.site.social %}
+                        <ul class=" list-unstyled">
+                            <li>
+                                <a href="{{ item.url }}">
+                                    <i class="fab {{ item.icon }} social-icon {{ item.color }}" aria-hidden="true"></i>
+                                </a>
+                            </li>
+                        </ui>
+                    {% endfor %}
+                </div>
             </div>
             <div class="col-md-8">
                 <div class="text">
