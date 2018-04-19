@@ -13,12 +13,12 @@
                     {% for isa in page.header.isa %}
                         <span>{{ isa.name }}</span>{% endfor %}
                 </div>
-                <div class="hero-social">
-                    <ul class="ul-np">
+                <div class="social">
+                    <ul>
                         {% for item in config.site.social %}
                             <li>
                                 <a href="{{ item.url }}">
-                                    <i class="fab {{ item.icon }} social-icon {{ item.color }}" aria-hidden="true"></i>
+                                    <i class="fab {{ item.icon }} social-icon {{ item.color }} {% if loop.last %} last {% endif %}" aria-hidden="true"></i>
                                 </a>
                             </li>
                         {% endfor %}

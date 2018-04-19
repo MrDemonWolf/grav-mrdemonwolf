@@ -70,9 +70,17 @@
                             <img align="absmiddle" src="https://proxima.radiovendor.com:2199/system/images/tunein-qtl.png" border="0" alt="QuickTime" title="QuickTime"/>
                         </a>
                     </div>
+                    <div class="cc_recenttracks_list recent_songs" data-username="mrdemonwolf">Loading ...</div>
                 </div>
                 <div class="col-md-4 col-12">
                     <div class="details">
+                        <div class="title">
+                            {{ page.header.about.header }}
+                        </div>
+                        <div class="description">
+                            {{ page.header.about.description }}
+                        </div>
+
                         <div class="title">Title:</div>
                         <div id="radio_title">
                             <span class="cc_streaminfo" data-type="title" data-username="mrdemonwolf">Loading...</span>
@@ -91,13 +99,12 @@
                             <span class="cc_streaminfo" data-type="server" data-username="mrdemonwolf">Loading Status...</span>
                         </div>
                     </div>
-                    {% if page.header.songrequest %}
+                    {% if page.header.songrequests.enabled %}
                         <div class="songrequest">
-                            <a type="button" class="btn btn-large btn-block btn-default" href="{{ site.subpath }}/radio/songrequest" target="_blank">Request Song</a>
+                            <a type="button" class="btn btn-large btn-block btn-default" href="{{ base_url_absolute }}/radio/songrequest" target="_blank">Request Song</a>
                         </div>
                     {% endif %}
                 </div>
-                <div class="cc_recenttracks_list recent_songs" data-username="mrdemonwolf">Loading ...</div>
             </div>
         </div>
     </div>
