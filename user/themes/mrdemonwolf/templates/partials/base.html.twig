@@ -43,6 +43,9 @@
             {{ assets.css() }}
 
             {% block javascripts %}
+                {# Jqery JS #}
+                {% do 
+                    assets.addJs('theme://lib/jquery/js/jquery.min.js', 100) %}
                 {# Bootstrap JS #}
                 {% do 
                     assets.addJs('theme://lib/bootstrap/js/bootstrap.bundle.min.js', 99) %}
