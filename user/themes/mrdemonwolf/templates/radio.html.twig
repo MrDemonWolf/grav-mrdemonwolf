@@ -81,23 +81,13 @@
                             {{ page.header.about.description }}
                         </div>
 
-                        <div class="title">Title:</div>
-                        <div id="radio_title">
-                            <span class="cc_streaminfo" data-type="title" data-username="mrdemonwolf">Loading...</span>
-                        </div>
-                        <div class="title">Current Song</div>
-                        <div id="radio_current_song">
-                            <span class="cc_streaminfo" data-type="song" data-username="mrdemonwolf">Loading...</span>
-                        </div>
-                        <div class="title">
-                            Current Listeners</div>
-                        <div class="current_listeners">
-                            <span class="cc_streaminfo" data-type="listeners" data-username="mrdemonwolf">Loading...</span>
-                        </div>
-                        <div class="title">Status</div>
-                        <div id="status">
-                            <span class="cc_streaminfo" data-type="server" data-username="mrdemonwolf">Loading Status...</span>
-                        </div>
+                        {% for details in page.header.details %}
+                            <div class="title">{{ details.title }}</div>
+                            <div id="radio_title">
+                                <span class="cc_streaminfo" data-type="{{ details.dataType }}" data-username="{{ details.dataUsername }}">Loading...</span>
+                            </div>
+                        {% endfor %}
+
                     </div>
                     {% if page.header.songrequests.enabled %}
                         <div class="songrequest">

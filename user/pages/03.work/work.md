@@ -8,9 +8,9 @@ galleryFliter:
     -
         title: All
         name: all
-    -
-        title: Adobe XD
-        name: adobe-xd
+    # -
+    #     title: Adobe XD
+    #     name: adobe-xd
     -
         title: HTML
         name: html
@@ -26,7 +26,7 @@ galleryThumbnails:
         urlPath: work
     - 
         title: Aishazart
-        fliter: wordpress'
+        fliter: wordpress
         src: aishazart_thumbnail.png
         url: aishazart
         urlPath: work

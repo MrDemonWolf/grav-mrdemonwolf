@@ -35,4 +35,5 @@ form:
             label: Your Message
             id: message
             required: true
+visible: false
 ---

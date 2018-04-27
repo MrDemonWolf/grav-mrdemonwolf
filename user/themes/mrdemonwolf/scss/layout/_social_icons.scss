@@ -64,6 +64,24 @@
     }
 }
 
+.email-color {
+    color: $email-color;
+
+    &.effect:hover {
+        color: darken($email-color, 10%);
+        transition: all 3s;
+    }
+}
+
+.phone-color {
+    color: $phone-color;
+
+    &.effect:hover {
+        color: darken($phone-color, 10%);
+        transition: all 3s;
+    }
+}
+
 /* Background */
 .twitter-color_background {
     background-color: $twitter-color;
@@ -118,5 +136,21 @@
 
     &.effect:hover {
         background-color: darken($linkedin-color, 10%);
+    }
+}
+
+.email-color_background {
+    background-color: $email-color;
+
+    &.effect:hover {
+        background-color: darken($email-color, 10%);
+    }
+}
+
+.phone-color_background {
+    background-color: $phone-color;
+
+    &.effect:hover {
+        background-color: darken($phone-color, 10%);
     }
 }

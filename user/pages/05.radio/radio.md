@@ -8,4 +8,21 @@ header:
     title: Radio
 songrequests:
     enabled: true
+details:
+    -
+        title: 'Title:'
+        dataType: title
+        dataUsername: mrdemonwolf
+    -
+        title: Current Song
+        dataType: song
+        dataUsername: mrdemonwolf
+    -
+        title: Current Listeners
+        dataType: listeners
+        dataUsername: mrdemonwolf
+    -
+        title: Status
+        dataType: server
+        dataUsername: mrdemonwolf
 ---
