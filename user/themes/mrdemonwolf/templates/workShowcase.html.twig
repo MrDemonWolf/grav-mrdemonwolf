@@ -3,7 +3,7 @@
     <div class="container work">
         <div class="row">
             <div class="col-md-12">
-                <div class="title">
+                <div class="title text-center">
                     {{ page.header.work_title }}
                 </div>
                 <hr class="line">
@@ -11,23 +11,33 @@
         </div>
         <div class="container">
             <div class="row">
-                <div class="col-md-4">
+                <div class="col-md-6">
                     <div class="header">
-                        Start Date
+                        Why?
                     </div>
-                    <div class="date">
-                        {{ page.header.work_start_date }}
+                    <div class="subheader">
+                        {{ page.header.workWhy }}
                     </div>
                 </div>
-                <div class="col-md-4">
+                <div class="col-md-6">
                     <div class="header">
-                        End Date
+                        Tech used
                     </div>
-                    <div class="date">
-                        {{ page.header.work_end_date }}
+                    <div class="subheader">
+                        {{ page.header.workTechused }}
                     </div>
                 </div>
-                <div class="col-md-4">
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="header">
+                        Time make
+                    </div>
+                    <div class="subheader">
+                        {{ page.header.workTime }}
+                    </div>
+                </div>
+                <div class="col-md-6">
                     <div class="header">
                         Colors
                     </div>
@@ -39,35 +49,37 @@
                 </div>
             </div>
         </div>
-        <div class="container">
-            <div class="list-group gallery">
-                <div class="row">
-                    {% for work_images in page.header.work_images %}
-                        {% set image = page.media[work_images.src].quality(100) %}
-                        {% set image_url = image.url %}
-                        {% if loop.first %}
-                            <div class="row">
-                                {# open row #}
-                            {% endif %}
-                            <div class="col-lg-4 col-12">
-                                <div class="text-right">
-                                    <div class="text-muted work-name">{{ work_images.title }}</div>
-                                </div>
-                                <a class="thumbnail fancybox" rel="ligthbox" href="{{ image_url }}">
-                                    <img class="img-fluid" alt="{{ work_images.name }} Project" src="{{ image_url }}">
-                                </a>
-                            </div>
-                            {% if loop.index % 3 == 0 %}
-                            </div>
-                            <div class="row">
-                            {% endif %}
-                            {% if loop.last %}
-                            </div>
+    </div>
+    <div class="container">
+        <div class="list-group gallery">
+        <div class="header text-center">Design/Screenshots</div>
+            <div class="row">
+                {% for work_images in page.header.work_images %}
+                    {% set image = page.media[work_images.src].quality(100) %}
+                    {% set image_url = image.url %}
+                    {% if loop.first %}
+                        <div class="row">
+                            {# open row #}
                         {% endif %}
-                    {% endfor %}
-                </div>
+                        <div class="col-lg-4 col-12">
+                            <div class="text-right">
+                                <div class="text-muted work-name">{{ work_images.title }}</div>
+                            </div>
+                            <a class="thumbnail fancybox" rel="ligthbox" href="{{ image_url }}">
+                                <img class="img-fluid" alt="{{ work_images.name }} Project" src="{{ image_url }}">
+                            </a>
+                        </div>
+                        {% if loop.index % 3 == 0 %}
+                        </div>
+                        <div class="row">
+                        {% endif %}
+                        {% if loop.last %}
+                        </div>
+                    {% endif %}
+                {% endfor %}
             </div>
         </div>
     </div>
+</div>
 
 {% endblock %}
