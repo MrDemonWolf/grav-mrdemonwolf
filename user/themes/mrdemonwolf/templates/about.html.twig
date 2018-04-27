@@ -30,7 +30,7 @@
                         {{ config.site.author.phone }}</a>
                 </div>
                 <div class="social">
-                    {% for item in config.site.social %}
+                    {% for item in config.site.social | slice(0, 6) %}
                         <ul class=" list-unstyled">
                             <li>
                                 <a href="{{ item.url }}">

@@ -29,7 +29,30 @@
         </div>
         <div class="container">
             <div class="row">
-                <div class="col-md-7 col-12">
+                <div class="col-md-4 col-12 mr-auto">
+                    <div class="details">
+                        <div class="title">
+                            {{ page.header.about.header }}
+                        </div>
+                        <div class="description">
+                            {{ page.header.about.description }}
+                        </div>
+
+                        {% for details in page.header.details %}
+                            <div class="title">{{ details.title }}</div>
+                            <div id="radio_title">
+                                <span class="cc_streaminfo" data-type="{{ details.dataType }}" data-username="{{ details.dataUsername }}">Loading...</span>
+                            </div>
+                        {% endfor %}
+
+                    </div>
+                    {% if page.header.songrequests.enabled %}
+                        <div class="songrequest">
+                            <a type="button" class="btn btn-large btn-block btn-default" href="{{ base_url_absolute }}/radio/songrequest" target="_blank">Request Song</a>
+                        </div>
+                    {% endif %}
+                </div>
+                <div class="col-md-6 col-12 ml-auto">
                     <div id="jquery_jplayer_1" class="jp-jplayer"></div>
                     <div id="jp_container_1" class="jp-audio" role="application" aria-label="media player">
                         <div class="jp-type-single">
@@ -71,29 +94,6 @@
                         </a>
                     </div>
                     <div class="cc_recenttracks_list recent_songs" data-username="mrdemonwolf">Loading ...</div>
-                </div>
-                <div class="col-md-4 col-12">
-                    <div class="details">
-                        <div class="title">
-                            {{ page.header.about.header }}
-                        </div>
-                        <div class="description">
-                            {{ page.header.about.description }}
-                        </div>
-
-                        {% for details in page.header.details %}
-                            <div class="title">{{ details.title }}</div>
-                            <div id="radio_title">
-                                <span class="cc_streaminfo" data-type="{{ details.dataType }}" data-username="{{ details.dataUsername }}">Loading...</span>
-                            </div>
-                        {% endfor %}
-
-                    </div>
-                    {% if page.header.songrequests.enabled %}
-                        <div class="songrequest">
-                            <a type="button" class="btn btn-large btn-block btn-default" href="{{ base_url_absolute }}/radio/songrequest" target="_blank">Request Song</a>
-                        </div>
-                    {% endif %}
                 </div>
             </div>
         </div>
