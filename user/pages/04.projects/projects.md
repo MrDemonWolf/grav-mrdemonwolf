@@ -4,5 +4,5 @@ menu: Projects
 header: 
     enabled: true
     title: Past work
-visible: true
+visible: false
 ---
