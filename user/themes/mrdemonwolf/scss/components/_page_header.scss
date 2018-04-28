@@ -4,9 +4,9 @@
 .page_header {
     text-align: center;
     height: 100%;
-    background: #015274;
-    padding-top: 32px;
-    padding-bottom: 32px;
+    background: #ffffff;
+    padding-top: 1em;
+    padding-bottom: 1em;
     margin: 0px;
     font-weight: 700;
 
@@ -19,12 +19,10 @@
 
     .inner {
         background-color: transparent !important;
-        padding-top: 25px;
-        padding-bottom: 25px;
-
+        
         .header {
             font-family: $main-font;
-            color: #ffffff;
+            color: $brand-color;
             font-weight: 700;
             font-size: .75em;
         }
