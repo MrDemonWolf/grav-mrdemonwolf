@@ -1,57 +1,18 @@
-<script>
-    $(document).ready(function () {
-        // Gallery
-        $(".showcase_filter-button").click(function () {
-            var value = $(this).attr('data-filter');
-
-            if (value == "all") {
-                $('.filter').show('1000');
-            } else {
-                $(".filter").not('.' + value).hide('3000');
-                $('.filter').filter('.' + value).show('3000');
-
-            }
-        });
-
-        if ($(".showcase_filter-button").removeClass("active")) {}
-
-        var showcaseContainer = document.getElementById("showcase_filter");
-        var showcaseButton = showcaseContainer.getElementsByClassName("showcase_filter-button");
-        for (var i = 0; i < showcaseButton.length; i++) {
-            showcaseButton[i].addEventListener("click", function () {
-                var current = document.getElementsByClassName("active");
-                current[0].className = current[0].className.replace(" active", "");
-                this.className += " active";
-            });
-        }
-    });
-</script>
 <!-- Gallery -->
-<div class="container showcase_gallery">
+<div class="container">
     <div class="row">
-        <div class="gallery col-12">
-            <div align="center" class="showcase_filter" id="showcase_filter">
-                {% for galleryFliter in page.header.galleryFliter %}
-                    <button class="btn btn-default showcase_filter-button" data-filter="{{ galleryFliter.name }}">{{ galleryFliter.title}}</button>
-                {% endfor %}
-            </div>
-        </div>
-    </div>
-    <div class="container">
-        <div class="row">
-            {% for galleryThumbnails in page.header.galleryThumbnails %}
-                {% set image = page.media[galleryThumbnails.src].quality(100) %}
-                {% set image_url = image.url %}
-                <div class="product col-lg-4 col-12 filter {{ galleryThumbnails.fliter }}">
-                    <div class="image-hovereffect">
-                        <img src="{{ image_url }}" class="img-thumbnail">
-                        <div class="overlay">
-                            <div class="project-name">{{ galleryThumbnails.title }}</div>
-                            <a href="{{ base_url_absolute }}/{{ galleryThumbnails.urlPath }}/{{ galleryThumbnails.url }}" class="project-page">View</a>
-                        </div>
+        {% for galleryThumbnails in page.header.galleryThumbnails %}
+            {% set image = page.media[galleryThumbnails.src].quality(100) %}
+            {% set image_url = image.url %}
+            <div class="product col-lg-4 col-12 filter {{ galleryThumbnails.fliter }}">
+                <div class="image-hovereffect">
+                    <img src="{{ image_url }}" class="img-thumbnail">
+                    <div class="overlay">
+                        <div class="project-name">{{ galleryThumbnails.title }}</div>
+                        <a href="{{ base_url_absolute }}/{{ galleryThumbnails.urlPath }}/{{ galleryThumbnails.url }}" class="project-page">View</a>
                     </div>
                 </div>
-            {% endfor %}
-        </div>
+            </div>
+        {% endfor %}
     </div>
 </div>

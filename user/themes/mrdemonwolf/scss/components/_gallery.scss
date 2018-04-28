@@ -7,34 +7,6 @@
     .gallery {
         display: inline-block;
     }
-
-    .showcase_filter {
-        padding-bottom: 8px;
-    }
-
-    .showcase_filter-button {
-        margin: 12px 0 12px 12px;
-        font-size: 1.15em;
-        border: 1px solid $brand-color-alt;
-        border-radius: 5px;
-        text-align: center;
-        color: $brand-color-alt;
-        background: #ffff;
-
-        &:hover {
-            font-size: 1.15em;
-            border: 1px solid $brand-color-alt;
-            border-radius: 5px;
-            text-align: center;
-            color: #ffffff;
-            background-color: $brand-color-alt;
-        }
-
-        &.active {
-            background-color: $brand-color-alt;
-            color: #ffffff;
-        }
-    }
 }
 
 .image-hovereffect {
@@ -58,7 +30,7 @@
     img {
         display: block;
         position: relative;
-        transition: all 0.4s ease-in;
+        transition: all 0.4s ease-out;
         padding: 0px;
         background-color: transparent;
         border: none;
@@ -67,7 +39,7 @@
 
     &:hover img {
         filter: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg"><filter id="filter"><feColorMatrix type="matrix" color-interpolation-filters="sRGB" values="0.2126 0.7152 0.0722 0 0 0.2126 0.7152 0.0722 0 0 0.2126 0.7152 0.0722 0 0 0 0 0 1 0" /><feGaussianBlur stdDeviation="3" /></filter></svg>#filter');
-        filter: grayscale(1) blur(8px);
+        filter: blur(8px);
         transform: scale(1.2);
     }
 
@@ -89,7 +61,7 @@
         padding: 7px 14px;
         border: 1px solid #fff;
         margin: 25% 0 0 0;
-        background-color: transparent;
+        background-color: rgba(0, 0, 0, 0.25);
         font-family: $main-font;
         font-weight: 700;
 
