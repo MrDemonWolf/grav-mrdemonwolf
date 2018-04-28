@@ -1,0 +1,63 @@
+title: MrDemonWolf
+email: demonwolf@demonwolfdev.com
+default_lang: eng
+author:
+  name: Nathan Henniges
+  email: 'demonwolf@demonwolfdev.com'
+  phone: +1 608 466 2968 
+  phoneAlt: +16084662968
+  location: Wisconsin, United States
+  type: Organization
+  jobtitle:  Freelancer & Community Owner 
+  foundingDate: 2016
+  nationality: American
+  url: https://www.keybase.com/mrdemonwolf/
+metadata:
+    description: 'MrDemonWolf is UX Designer, Gamer, Streamer, Youtuber. Freelancer for UX Design and Wordpress site builds. Want a new website for your company.'
+    keywords: ux designer, front-end devloper, front-end development ,gamer, streamer, youtuber 
+    generator: 
+GoogleAnalytics: UA-107275871-1 
+social:
+  - 
+    icon: 'fab fa-twitter'
+    color: 'twitter-color'
+    url: 'http://www.twitter.com/mrdemonwolf'
+  - 
+    icon: 'fab fa-github'
+    color: 'github-color'
+    url: 'https://www.github.com/mrdemonwolf'
+  - 
+    icon: 'fab fa-linkedin'
+    color: 'linkedin-color'
+    url: 'https://www.linkedin.com/in/nathan-henniges/'
+  - 
+    icon: 'fab fa-spotify'
+    color: 'spotify-color'
+    url: 'https://open.spotify.com/user/demonwolf97/'
+  - 
+    icon: 'fab fa-youtube'
+    color: 'youtube-color'
+    url: 'https://www.youtube.com/mrdemonwolf'
+  - 
+    icon: 'fab fa-twitch'
+    color: 'twitch-color'
+    url: 'https://www.twitch.tv/mrdemonwolf/'
+  -
+    icon: 'fas fa-envelope'
+    color: 'email-color'
+    url: 'mailto:demonwolf@demonwolfdev.com'
+  -
+    icon: 'fas fa-phone'
+    color: 'phone-color'
+    url: 'tel:16084662968'
+twitchbanner:
+  - 
+    username: mrdemonwolf
+    apikey: "n9zpqgrbidq5bujz49eilfkf2lvpnly"
+# links:
+#     - 
+#       title: About
+#       url: '#about'
+#     - 
+#       title: Work
+#       url: '#work'
