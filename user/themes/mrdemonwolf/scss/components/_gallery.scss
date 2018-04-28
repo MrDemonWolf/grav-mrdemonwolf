@@ -23,17 +23,15 @@
 
         &:hover {
             font-size: 1.15em;
-            border: 1px solid $brand-color;
+            border: 1px solid $brand-color-alt;
             border-radius: 5px;
             text-align: center;
             color: #ffffff;
-            background-color: $brand-color;
+            background-color: $brand-color-alt;
         }
-    }
 
-    .showcase_filter-button {
         &.active {
-            background-color: $brand-color;
+            background-color: $brand-color-alt;
             color: #ffffff;
         }
     }
