@@ -30,6 +30,9 @@
                 {# Narmailze CSS #}
                 {% do 
                     assets.addCss('theme://lib/cookieconsent/css/cookieconsent.min.css', 100) %}
+                {# Narmailze CSS #}
+                {% do 
+                    assets.addCss('theme://lib/cookies-eu-banner/css/cookies-eu-banner.default.min.css', 100) %}
                 {# Jplay Blue monday Skin CSS #}
                 {% do 
                     assets.addCss('theme://lib/jplayer/skin/blue.monday/css/jplayer.blue.monday.min.css', 100) %}
@@ -58,12 +61,13 @@
                 {% do assets.addJs('theme://lib/bootstrap-validator/js/validator.min.js', 96) %}
                 {# Cookie popup JS #}
                 {% do 
-                    assets.addJs('theme://lib/cookieconsent/js/cookieconsent.min.js', 95) %}
+                    assets.addJs('theme://lib/cookies-eu-banner/js/cookies-eu-banner.min.js', 95) %}
                 {# Jplayer JS #}
                 {% do 
                     assets.addJs('theme://lib/jplayer/js/jquery.jplayer.min.js', 94) %}
                 {# Bootstrap Notify JS #}
-                {% do assets.addJs('theme://lib/bootstrap-notify/js/bootstrap-notify.min.js', 93) %}
+                {% do 
+                    assets.addJs('theme://lib/bootstrap-notify/js/bootstrap-notify.min.js', 93) %}
                 {# Momentjs JS #}
                 {% do 
                     assets.addJs('theme://lib/momentjs/js/moment.min.js', 92) %}
@@ -79,11 +83,11 @@
         {% endblock head%}
     </head>
     <body id="top" class="{{ page.header.body_classes }}">
-        {% include 'partials/twitchNotice.html.twig' %}
-        {% include 'partials/cookie-notice.html.twig' %}
         {% block header_navigation %}
             {% include 'partials/navigation.html.twig' %}
         {% endblock %}
+        {% include 'partials/cookie-notice.html.twig' %}
+        {% include 'partials/twitchNotice.html.twig' %}
 
         {% block body %}
             <section id="body">

@@ -37,11 +37,18 @@ $(document).ready(function () {
         openEffect: "none",
         closeEffect: "none"
     });
-    setTimeout(function () {
-        $("#cookieConsent").fadeIn(200);
-    }, 4000);
-    $("#closeCookieConsent, .cookieConsentOK").click(function () {
-        $("#cookieConsent").fadeOut(200);
-    });
+});
 
+$(function () {
+    //caches a jQuery object containing the header element
+    var header = $("#cookies-eu-banner");
+    $(window).scroll(function () {
+        var scroll = $(window).scrollTop();
+
+        if (scroll >= 100) {
+            header.addClass("scroll");
+        } else {
+            header.removeClass("scroll");
+        }
+    });
 });

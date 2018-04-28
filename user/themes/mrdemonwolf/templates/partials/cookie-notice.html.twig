@@ -1,20 +1,23 @@
-<!-- EU Cookie notice -->
+<div id="cookies-eu-banner" class="{% if page.home %}landing{% endif %}" style="display: none;">
+    By continuing your visit to this site, you accept the use of cookies by Google Analytics to make visits statistics.
+<a href="{{ base_url_absolute }}/legal/" id="cookies-eu-more">Read more</a>
+    <button id="cookies-eu-reject">Reject</button>
+    <button id="cookies-eu-accept">Accept</button>
+</div>
 <script>
-    window.addEventListener("load", function () {
-        window.cookieconsent.initialise({
-            "palette": {
-                "popup": {
-                    "background": "#ffffff",
-                    "text": "#000000"
-                },
-                "button": {
-                    "background": "#00709f"
-                }
-            },
-            "position": "bottom-right",
-            "content": {
-                "href": "{{ base_url_absolute }}/legal/"
-            }
-        })
+    new CookiesEuBanner(function () {
+        (function (b, o, i, l, e, r) {
+            b.GoogleAnalyticsObject = l;
+            b[l] || (b[l] = function () {
+                (b[l].q = b[l].q || []).push(arguments)
+            });
+            b[l].l = + new Date;
+            e = o.createElement(i);
+            r = o.getElementsByTagName(i)[0];
+            e.src = 'https://www.google-analytics.com/analytics.js';
+            r.parentNode.insertBefore(e, r)
+        }(window, document, 'script', 'ga'));
+        ga('create', '{{ config.site.GoogleAnalytics }}');
+        ga('send', 'pageview');
     });
 </script>

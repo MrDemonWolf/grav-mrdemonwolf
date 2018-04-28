@@ -1,0 +1,14 @@
+{
+    "expr": true,
+    "noarg": true,
+    "onevar": true,
+    "quotmark": "double",
+    "undef": true,
+    "unused": true,
+    "eqnull": true,
+
+    "browser": true,
+    "node": true,
+
+  	"predef": ["define"]
+}
