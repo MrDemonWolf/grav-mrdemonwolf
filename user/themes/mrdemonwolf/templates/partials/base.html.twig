@@ -104,9 +104,7 @@
                         <div class="col-md-12">
                             <div class="content text-center">
                                 Copyright ©
-                                <script>
-                                    document.write(new Date().getFullYear());
-                                </script>
+                                {{ "now"|date('Y') }}
                                 <a href="{{ base_url_absolute }}">{{ site.title }}</a>
                                 |
                                 <a href="{{ base_url_absolute }}/legal/">Privacy Statement</a>
