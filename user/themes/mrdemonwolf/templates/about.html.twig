@@ -12,9 +12,7 @@
         <div class="row">
             <div class="col-lg-3 col-12">
                 {% for picture in page.header.picture %}
-                    {% set image = page.media[picture.src].quality(100) %}
-                    {% set image_url = image.url %}
-                    <img src="{{ image_url }}" alt="{{ config.site.name}} picture" class="img-thumbnail profile_pic">
+                    <img src="{{ url('theme://images/profile_pic.png') }}" alt="{{ config.site.name}} picture" class="img-thumbnail profile_pic">
                 {% endfor %}
                 <div class="name">Name:
                     {{ config.site.author.name }}</div>

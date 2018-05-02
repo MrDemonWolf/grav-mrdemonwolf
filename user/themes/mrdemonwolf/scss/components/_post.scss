@@ -1,3 +1,50 @@
 // -----------------------------------------------------------------------------
 // This file contains all styles related to the post component.
 // -----------------------------------------------------------------------------
+.post {
+    $background_color_1: black;
+    $background_color_2: white;
+
+    .post-content {
+        margin-top: 100px;
+    }
+
+    .hero {
+        height: 350px;
+        background-color: $background_color_1;
+        background-image: url(../images/hero_bg.png);
+        background-position: center center;
+        background-size: cover;
+        position: relative;
+        text-align: center;
+    }
+    .post-tags {
+      display: inline;
+    }
+
+    .author {
+        position: absolute;
+        bottom: -85px;
+        width: 100%;
+
+        .headshot {
+            margin-left: auto;
+            margin-right: auto;
+            display: inline-block;
+
+            img {
+                background-color: $background_color_2;
+                border-radius: 100%;
+                border: 4px solid $brand-color;
+                width: 175px;
+                height: 175px;
+                padding: 0;
+            }
+        }
+        .name {
+          font-family: $second-font;
+          font-size: 1.15em;
+          color: #000000;
+        }
+    }
+}

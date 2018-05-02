@@ -1,78 +1,81 @@
 {% extends 'partials/base.html.twig' %}
 
 {% block content %}
-    <div class="container">
-        <div class="post-meta">
+    <div class="post">
+        <div class="container-fluid p-0">
+            <div class="hero">
+                <div class="author">
+                    <div class="headshot"><img src="{{ url('theme://images/profile_pic.png') }}" alt="{{ config.site.author.name }} Headshot" class="img-thumbnail"></div>
+                    <div class="name">{{ config.site.author.name }}</div>
+                </div>
+            </div>
+        </div>
+        <div class="container post-content">
             <div class="row">
-                <div class="col-md-3">
-                    <i class="far fa-calendar meta-icons"></i>
-                    <spam class="meta-text" datetime="{{ page.date| nicetime(false) }}">{{ page.date| nicetime(false) }}</spam>
+                <div class="col-md-8 content">
+                    {{ content }}
                 </div>
-                {% if page.comments %}
-                    <div class="col-md-3">
-                        <i class="fas fa-comments meta-icons"></i>
-                        <a href="{{ base_url_absolute }}{{ page.url }}#disqus_thread">
-                            <span class="disqus-comment-count meta-text" data-disqus-url="{{ base_url_absolute }}{{ page.url}}">No Comments</span>
-                        </a>
+                <div class="col-md-4">
+                    <div class="post-sidebar">
+                        <div class="side-content">
+                            <div class="post-meta">
+                                <i class="far fa-calendar meta-icons"></i>
+                                <spam class="meta-text" datetime="{{ page.date| nicetime(false) }}">{{ page.date| nicetime(false) }}</spam>
+                            </div>
+                        </div>
+                        <div class="side-content">
+                            <div class="post-meta">
+                                <i class="fas fa-tags meta-icons"></i>
+                                <div class="post-tags">
+                                    {% for tag in page.taxonomy.tag | slice(0, 4) %}
+                                        <a class="meta-text" href="{{ base_url_absolute }}/tags/#{{ tag }}">{{ tag }}</a>
+                                    {% endfor %}
+                                </div>
+                            </div>
+                        </div>
+                        {% if page.header.comments %}
+                            <div class="side-content">
+                                <i class="fas fa-comments meta-icons"></i>
+                                <a href="{{ site.subpath }}{{ post.url }}#disqus_thread">
+                                    <span class="disqus-comment-count meta-text" data-disqus-url="{{ site.subpath }}{{ post.url}}">No Comments</span>
+                                </a>
+                            </div>
+                        {% endif %}
                     </div>
-                {% endif %}
-                <div class="col-md-3">
-                    <i class="fas fa-tags meta-icons"></i>
-                    <div class="post-tags">
-                        {% for tag in page.taxonomy.tag | slice(0, 4)  %}
-                            <a class="meta-text" href="{{ base_url_absolute }}/tags/#{{ tag }}">{{ tag }}</a>
-                        {% endfor %}
-                    </div>
-                </div>
-                <div class="col-md-3">
-                    <i class="fas fa-user"></i>
-                    <span class="author">{{ config.site.author.name }}</span>
                 </div>
             </div>
         </div>
-    </div>
 
-    <div class="container">
-        <div class="col-md-8">
-            <div class="post-content">
-                {{ content }}
+        {% if page.header.comments %}
+            <div class="container">
+                <div class="col-md-12">
+                    <div id="disqus_thread"></div>
+                </div>
             </div>
-        </div>
-        <div class="col-md-4">
-            <div class="post-sidebar"></div>
-        </div>
+            <script>
+                /**
+                *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+                *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
+                */
+                /*
+                var disqus_config = function () {
+                this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+                this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+                };
+                */
+                (function () { // REQUIRED CONFIGURATION VARIABLE: EDIT THE SHORTNAME BELOW
+                    var d = document,
+                        s = d.createElement('script');
+
+                    s.src = 'https://{{ config.site.disqus }}.disqus.com/embed.js'; // IMPORTANT: Replace EXAMPLE with your forum shortname!
+
+                    s.setAttribute('data-timestamp', + new Date());
+                    (d.head || d.body).appendChild(s);
+                })();
+            </script>
+            <noscript>Please enable JavaScript to view the
+                <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a>
+            </noscript>
+        {% endif %}
     </div>
-</div>
-
-{% if page.header.comments %}
-    <div class="container">
-        <div class="col-md-12">
-            <div id="disqus_thread"></div>
-        </div>
-    </div>
-    <script>
-        /**
-   *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-   *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
-   */
-        /*
-  var disqus_config = function () {
-      this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
-      this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
-  };
-  */
-        (function () { // REQUIRED CONFIGURATION VARIABLE: EDIT THE SHORTNAME BELOW
-            var d = document,
-                s = d.createElement('script');
-
-            s.src = 'https://{{ config.site.disqus }}.disqus.com/embed.js'; // IMPORTANT: Replace EXAMPLE with your forum shortname!
-
-            s.setAttribute('data-timestamp', + new Date());
-            (d.head || d.body).appendChild(s);
-        })();
-    </script>
-    <noscript>Please enable JavaScript to view the
-        <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a>
-    </noscript>
-{% endif %}
 {% endblock %}
