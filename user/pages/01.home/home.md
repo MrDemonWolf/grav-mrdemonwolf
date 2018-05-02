@@ -22,4 +22,9 @@ button:
     - 
         title: Contact Me
         url: "#contact"
+seo:
+    type: website
+    description: 
+    keywords: ux designer, front-end devloper, front-end development ,gamer, streamer, youtuber
+    image: 
 ---

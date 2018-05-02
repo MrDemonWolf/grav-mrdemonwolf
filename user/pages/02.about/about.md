@@ -1,7 +1,7 @@
 ---
 title: About
 menu: About
-header: 
+header:
     enabled: true
     title: About Me
 about:
@@ -10,6 +10,11 @@ about:
         - Currently I’m a contractor for <a href="https://kreynation.com"><strong>KreyNation</strong></a>. I’m also available for Freelance work for any exciting project with  tech startups, businesses, entrepreneurs and developers all across the world to create stunning Interfaces and User Experiences. I look forward to hearing from you!
 
 picture:
-    - 
+    -
         src: 'profile_pic.png'
+seo:
+    type: website
+    description: About Nathan Henniges.
+    keywords: ux designer, front-end devloper, front-end development ,gamer, streamer, youtuber, about, about me
+    image:
 ---

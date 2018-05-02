@@ -1,6 +1,7 @@
 title: MrDemonWolf
 email: demonwolf@demonwolfdev.com
 default_lang: eng
+creator: '@mrdemonwolf'
 author:
   name: Nathan Henniges
   email: 'demonwolf@demonwolfdev.com'
@@ -12,10 +13,6 @@ author:
   foundingDate: 2016
   nationality: American
   url: https://www.keybase.com/mrdemonwolf/
-metadata:
-    description: 'MrDemonWolf is UX Designer, Gamer, Streamer, Youtuber. Freelancer for UX Design and Wordpress site builds. Want a new website for your company.'
-    keywords: ux designer, front-end devloper, front-end development ,gamer, streamer, youtuber 
-    generator: 
 GoogleAnalytics: UA-107275871-1 
 social:
   - 
@@ -54,6 +51,7 @@ twitchbanner:
   - 
     username: mrdemonwolf
     apikey: "n9zpqgrbidq5bujz49eilfkf2lvpnly"
+disqus: mrdemonwolf-local
 # links:
 #     - 
 #       title: About
