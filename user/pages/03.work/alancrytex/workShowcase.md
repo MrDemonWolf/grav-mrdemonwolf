@@ -7,10 +7,15 @@ workTechused: Bootstrap, Jeykll, Font Awesome, Formspree
 workTime: '4 days'
 work_colors: colors.png
 work_images:
-    - 
+    -
         title: 'Landing Page'
         src: 'landing_page.png'
-    - 
+    -
         title: 'Work Page'
         src: 'work_page.png'
+seo:
+    type: website
+    description:
+    keywords: ux designer, front-end devloper, front-end development ,gamer, streamer, youtuber
+    image:
 ---

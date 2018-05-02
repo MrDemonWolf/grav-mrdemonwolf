@@ -3,30 +3,30 @@
 {% block content %}
     <div class="container">
         <div class="post-meta">
-            <div class="col-md-3">
-                <i class="far fa-calendar meta-icons"></i>
-                <time class="meta-text" datetime="{{ page.date|nicetime(false) }}">{{ page.date|nicetime(false) }}</time>
-            </div>
-            {% if page.comments %}
+            <div class="row">
                 <div class="col-md-3">
-                    <i class="fas fa-comments meta-icons"></i>
-                    <a href="{{ base_url_absolute }}{{ page.url }}#disqus_thread">
-                        <span class="disqus-comment-count meta-text" data-disqus-url="{{ base_url_absolute }}{{ page.url}}">No Comments</span>
-                    </a>
+                    <i class="far fa-calendar meta-icons"></i>
+                    <spam class="meta-text" datetime="{{ page.date| nicetime(false) }}">{{ page.date| nicetime(false) }}</spam>
                 </div>
-            {% endif %}
-            <div class="col-md-3">
-                <i class="fas fa-tags meta-icons"></i>
-                {# <div class="post-tags">
-                {% for tag in page.tags limit : 4 sort %}
-                    <a class="meta-text" href="{{ site.subpath }}/tags/#{{ tag | uri_escape }}">{{ tag }}</a>
-                {% endfor %}
-            </div> #}
-            </div>
-            <div class="col-md-3">
-                <i class="fas fa-user"></i>
-                <div class="author">
-                    {{ config.site.author.name }}
+                {% if page.comments %}
+                    <div class="col-md-3">
+                        <i class="fas fa-comments meta-icons"></i>
+                        <a href="{{ base_url_absolute }}{{ page.url }}#disqus_thread">
+                            <span class="disqus-comment-count meta-text" data-disqus-url="{{ base_url_absolute }}{{ page.url}}">No Comments</span>
+                        </a>
+                    </div>
+                {% endif %}
+                <div class="col-md-3">
+                    <i class="fas fa-tags meta-icons"></i>
+                    <div class="post-tags">
+                        {% for tag in page.taxonomy.tag | slice(0, 4)  %}
+                            <a class="meta-text" href="{{ base_url_absolute }}/tags/#{{ tag }}">{{ tag }}</a>
+                        {% endfor %}
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <i class="fas fa-user"></i>
+                    <span class="author">{{ config.site.author.name }}</span>
                 </div>
             </div>
         </div>

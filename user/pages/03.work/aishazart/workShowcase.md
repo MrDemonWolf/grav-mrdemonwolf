@@ -7,10 +7,15 @@ workTechused: Bootstrap, WordPress, Font Awesome
 workTime: 'about a week'
 work_colors: colors.png
 work_images:
-    - 
+    -
         title: 'Landing Page'
         src: 'landing_page.png'
-    - 
+    -
         title: 'Contact Page'
         src: 'contact_page.png'
+seo:
+    type: website
+    description:
+    keywords: ux designer, front-end devloper, front-end development ,gamer, streamer, youtuber
+    image:
 ---

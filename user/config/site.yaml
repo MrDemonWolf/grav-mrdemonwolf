@@ -47,7 +47,7 @@ social:
     icon: 'fas fa-phone'
     color: 'phone-color'
     url: 'tel:16084662968'
-twitchbanner:
+twitchNotice:
   - 
     username: mrdemonwolf
     apikey: "n9zpqgrbidq5bujz49eilfkf2lvpnly"
