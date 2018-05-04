@@ -1,13 +1,20 @@
 {% extends 'partials/base.html.twig' %}
 
 {% block content %}
-    <ul>
-        {% for post in page.find('/blog').children.order('date', 'desc').slice(0, 5) %}
-            <li class="recent-posts">
-                <strong>
-                    <a href="{{ post.url }}">{{ post.title }}</a>
-                </strong>
-            </li>
-        {% endfor %}
-    </ul>
+    <div class="blog">
+        <div class="container">
+            <div class="row">
+                {% set collection = page.collection() %}
+                {% for post in collection %}
+                    {% include 'partials/post.html.twig' %}
+                {% endfor %}
+            </div>
+        </div>
+        {% if config.plugins.pagination.enabled and collection.params.pagination %}
+            {% include 'partials/pagination.html.twig' with {
+                'base_url' : page.url,
+                'pagination' : collection.params.pagination
+            } %}
+        {% endif %}
+    </div>
 {% endblock %}

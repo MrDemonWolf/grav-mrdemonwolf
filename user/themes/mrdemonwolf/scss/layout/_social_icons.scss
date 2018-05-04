@@ -64,6 +64,15 @@
     }
 }
 
+.facebook-color {
+    color: $facebook-color;
+
+    &.effect:hover {
+        color: darken($facebook-color, 10%);
+        transition: all 3s;
+    }
+}
+
 .email-color {
     color: $email-color;
 
@@ -136,6 +145,14 @@
 
     &.effect:hover {
         background-color: darken($linkedin-color, 10%);
+    }
+}
+
+.facebook-color_background {
+    background-color: $facebook-color;
+
+    &.effect:hover {
+        background-color: darken($facebook-color, 10%);
     }
 }
 

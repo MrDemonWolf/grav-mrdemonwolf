@@ -1,6 +1,5 @@
 # Grav Specific
 .sass-cache
-composer.lock
 cache/*
 assets/*
 logs/*
@@ -12,3 +11,6 @@ ehthumbs.db
 Icon?
 Thumbs.db
 *.swp
+
+# Apache
+.htaccess

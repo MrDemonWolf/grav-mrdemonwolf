@@ -5,37 +5,41 @@ creator: '@mrdemonwolf'
 author:
   name: Nathan Henniges
   email: 'demonwolf@demonwolfdev.com'
-  phone: +1 608 466 2968 
+  phone: +1 608 466 2968
   phoneAlt: +16084662968
   location: Wisconsin, United States
   type: Organization
-  jobtitle:  Freelancer & Community Owner 
+  jobtitle:  Freelancer & Community Owner
   foundingDate: 2016
   nationality: American
   url: https://www.keybase.com/mrdemonwolf/
-GoogleAnalytics: UA-107275871-1 
+GoogleAnalytics: UA-107275871-1
 social:
-  - 
+  -
     icon: 'fab fa-twitter'
     color: 'twitter-color'
     url: 'http://www.twitter.com/mrdemonwolf'
-  - 
+  -
+    icon: 'fab fa-facebook-f'
+    color: 'facebook-color'
+    url: 'https://www.facebook.com/mrdemonwolf/'
+  -
     icon: 'fab fa-github'
     color: 'github-color'
     url: 'https://www.github.com/mrdemonwolf'
-  - 
+  -
     icon: 'fab fa-linkedin'
     color: 'linkedin-color'
     url: 'https://www.linkedin.com/in/nathan-henniges/'
-  - 
+  -
     icon: 'fab fa-spotify'
     color: 'spotify-color'
     url: 'https://open.spotify.com/user/demonwolf97/'
-  - 
+  -
     icon: 'fab fa-youtube'
     color: 'youtube-color'
     url: 'https://www.youtube.com/mrdemonwolf'
-  - 
+  -
     icon: 'fab fa-twitch'
     color: 'twitch-color'
     url: 'https://www.twitch.tv/mrdemonwolf/'
@@ -48,14 +52,14 @@ social:
     color: 'phone-color'
     url: 'tel:16084662968'
 twitchNotice:
-  - 
+  -
     username: mrdemonwolf
     apikey: "n9zpqgrbidq5bujz49eilfkf2lvpnly"
 disqus: mrdemonwolf-local
 # links:
-#     - 
+#     -
 #       title: About
 #       url: '#about'
-#     - 
+#     -
 #       title: Work
 #       url: '#work'
