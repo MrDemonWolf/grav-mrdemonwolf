@@ -1,31 +1,30 @@
 // -----------------------------------------------------------------------------
 // This file contains all styles related to the work component.
 // ----------------------------------------------------------------------------
-.gallery {
-    display: inline-block;
-    .thumbnail {
-      border: none;
-    }
-}
-
-a.thumbnail:hover, a.thumbnail:focus, a.thumbnail.active {
-    border-color: $brand-color-alt;
-}
-
-.work-name {
-    font-size: 1.25em;
-    text-align: center;
-    text-decoration: none;
-
-    &:hover {
-        text-decoration: none;
-    }
-}
-
 .work {
+    margin-bottom: $content_margin;
+
+    .thumbnail {
+        border: none;
+    }
+
     .gallery {
         display: inline-block;
         margin-top: 25px;
+    }
+
+    a.thumbnail:hover, a.thumbnail:focus, a.thumbnail.active {
+        border-color: $brand-color-alt;
+    }
+
+    .work-name {
+        font-size: 1.25em;
+        text-align: center;
+        text-decoration: none;
+
+        &:hover {
+            text-decoration: none;
+        }
     }
 
     .title {

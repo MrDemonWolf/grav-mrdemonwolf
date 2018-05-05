@@ -5,6 +5,8 @@
     $background_color_1: black;
     $background_color_2: white;
 
+    margin-bottom: $content_margin;
+
     .post-content {
         margin-top: 100px;
     }
@@ -18,8 +20,9 @@
         position: relative;
         text-align: center;
     }
+
     .post-tags {
-      display: inline;
+        display: inline;
     }
 
     .author {
@@ -41,10 +44,11 @@
                 padding: 0;
             }
         }
+
         .name {
-          font-family: $second-font;
-          font-size: 1.15em;
-          color: #000000;
+            font-family: $second-font;
+            font-size: 1.15em;
+            color: #000000;
         }
     }
 }

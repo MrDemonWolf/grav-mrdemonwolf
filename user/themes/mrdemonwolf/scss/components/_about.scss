@@ -1,14 +1,14 @@
 // -----------------------------------------------------------------------------
 // This file contains all styles related to the about component.
 // -----------------------------------------------------------------------------
-#about {
-    padding-bottom: $content_panding;
-    
+.about {
+    margin-bottom: $content_margin;
 
     .profile_pic {
         @extend .img-circle;
 
         max-width: 75%;
+
         // display: flex;
         // justify-content: center;
         // margin: 0px auto;
@@ -31,18 +31,18 @@
         ul {
             display: flex;
             justify-items: center;
+
             li {
                 padding-right: 8px;
             }
         }
     }
-}
 
-@media (max-width: 991px) {
-    #about {
+    @media (max-width: 991px) {
         .profile_pic {
             float: none;
             margin: 0 auto;
+            display: flex;
         }
     }
 }

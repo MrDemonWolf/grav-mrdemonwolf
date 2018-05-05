@@ -15,7 +15,7 @@ work_images:
         src: 'work_page.png'
 seo:
     type: website
-    description:
+    description: Slow loading times , wix branding, and limited control is no more.  Freash new design with increase contacts less drop offs.
     keywords: ux designer, front-end devloper, front-end development ,gamer, streamer, youtuber
     image:
 ---

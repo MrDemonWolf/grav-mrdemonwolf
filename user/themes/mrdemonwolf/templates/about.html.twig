@@ -8,42 +8,44 @@
         });
     </script>
     <!-- About me -->
-    <div class="container" id="about">
-        <div class="row">
-            <div class="col-lg-3 col-12">
-                {% for picture in page.header.picture %}
-                    <img src="{{ url('theme://images/profile_pic.png') }}" alt="{{ config.site.name}} picture" class="img-thumbnail profile_pic">
-                {% endfor %}
-                <div class="name">Name:
-                    {{ config.site.author.name }}</div>
-                <div class="location">Location:
-                    {{ config.site.author.location }}</div>
-                <div class="age" id="age"></div>
-                <div class="email">
-                    <a href="mailto:{{ config.site.author.email | safe_email}}">
-                        {{ config.site.author.email | safe_email}}</a>
-                </div>
-                <div class="phone">
-                    <a href="tel:{{ config.site.author.phoneAlt }}">
-                        {{ config.site.author.phone }}</a>
-                </div>
-                <div class="social">
-                    {% for item in config.site.social | slice(0, 6) %}
-                        <ul class=" list-unstyled">
-                            <li>
-                                <a href="{{ item.url }}">
-                                    <i class="fab {{ item.icon }} social-icon {{ item.color }}" aria-hidden="true"></i>
-                                </a>
-                            </li>
-                        </ui>
+    <div class="about">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-12">
+                    {% for picture in page.header.picture %}
+                        <img src="{{ url('theme://images/profile_pic.png') }}" alt="{{ config.site.name}} picture" class="img-thumbnail profile_pic">
                     {% endfor %}
+                    <div class="name">Name:
+                        {{ config.site.author.name }}</div>
+                    <div class="location">Location:
+                        {{ config.site.author.location }}</div>
+                    <div class="age" id="age"></div>
+                    <div class="email">
+                        <a href="mailto:{{ config.site.author.email | safe_email}}">
+                            {{ config.site.author.email | safe_email}}</a>
+                    </div>
+                    <div class="phone">
+                        <a href="tel:{{ config.site.author.phoneAlt }}">
+                            {{ config.site.author.phone }}</a>
+                    </div>
+                    <div class="social">
+                        {% for item in config.site.social | slice(0, 6) %}
+                            <ul class=" list-unstyled">
+                                <li>
+                                    <a href="{{ item.url }}">
+                                        <i class="fab {{ item.icon }} social-icon {{ item.color }}" aria-hidden="true"></i>
+                                    </a>
+                                </li>
+                            </ui>
+                        {% endfor %}
+                    </div>
                 </div>
-            </div>
-            <div class="col-md-8">
-                <div class="text">
-                    {% for section in page.header.about.text %}
-                        <p>{{ section | textilize }}</p>
-                    {% endfor %}
+                <div class="col-md-8">
+                    <div class="text">
+                        {% for section in page.header.about.text %}
+                            <p>{{ section | textilize }}</p>
+                        {% endfor %}
+                    </div>
                 </div>
             </div>
         </div>

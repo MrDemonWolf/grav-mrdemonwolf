@@ -49,37 +49,36 @@
                 </div>
             </div>
         </div>
-    </div>
-    <div class="container">
-        <div class="list-group gallery">
-        <div class="header text-center">Design/Screenshots</div>
-            <div class="row">
-                {% for work_images in page.header.work_images %}
-                    {% set image = page.media[work_images.src].quality(100) %}
-                    {% set image_url = image.url %}
-                    {% if loop.first %}
-                        <div class="row">
-                            {# open row #}
-                        {% endif %}
-                        <div class="col-lg-4 col-12">
-                            <div class="text-right">
-                                <div class="text-muted work-name">{{ work_images.title }}</div>
+        <div class="container">
+            <div class="list-group gallery">
+                <div class="header text-center">Design/Screenshots</div>
+                <div class="row">
+                    {% for work_images in page.header.work_images %}
+                        {% set image = page.media[work_images.src].quality(100) %}
+                        {% set image_url = image.url %}
+                        {% if loop.first %}
+                            <div class="row">
+                                {# open row #}
+                            {% endif %}
+                            <div class="col-lg-4 col-12">
+                                <div class="text-right">
+                                    <div class="text-muted work-name">{{ work_images.title }}</div>
+                                </div>
+                                <a class="thumbnail fancybox" rel="ligthbox" href="{{ image_url }}">
+                                    <img class="img-fluid" alt="{{ work_images.name }} Project" src="{{ image_url }}">
+                                </a>
                             </div>
-                            <a class="thumbnail fancybox" rel="ligthbox" href="{{ image_url }}">
-                                <img class="img-fluid" alt="{{ work_images.name }} Project" src="{{ image_url }}">
-                            </a>
-                        </div>
-                        {% if loop.index % 3 == 0 %}
-                        </div>
-                        <div class="row">
+                            {% if loop.index % 3 == 0 %}
+                            </div>
+                            <div class="row">
+                            {% endif %}
+                            {% if loop.last %}
+                            </div>
                         {% endif %}
-                        {% if loop.last %}
-                        </div>
-                    {% endif %}
-                {% endfor %}
+                    {% endfor %}
+                </div>
             </div>
         </div>
     </div>
-</div>
 
 {% endblock %}
