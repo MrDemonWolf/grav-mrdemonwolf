@@ -50,7 +50,7 @@ social:
   -
     icon: 'fas fa-phone'
     color: 'phone-color'
-    url: 'tel:16084662968'
+    url: 'tel:+16084662968'
 twitchNotice:
   -
     username: mrdemonwolf
