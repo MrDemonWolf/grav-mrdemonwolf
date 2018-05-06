@@ -1,31 +1,24 @@
-<div class="col-12">
-    <div class="post">
-        <img class="img-responsive post-image" src="https://dummyimage.com/500x500/000000/fff" alt="blog post image">
-        <div class="up-part">
-            <div class="media-left">
-                <div class="avatar">
-                    <img src="{{ url('theme://images/profile_pic.png')}}" alt="author image">
-                </div>
-            </div>
-            <div class="media-body">
-                <span>Posted by:
-                    <a href="#.">{{ post.header.author.name }}</a>
-                </span>
-                <span class="pull-right">{{ post.date | date("m/d/Y") }}</span>
-            </div>
+<div class="col-6 post">
+    <img class="img-thumbnail post-image" src="http://i50.tinypic.com/2nbf0ht.jpg" alt="blog post image">
+    <div class="post-meta">
+        <div class="title">
+            <a href="{{ post.url }}">{{ post.title }}</a>
         </div>
-        <!-- Article -->
-        <a href="{{ post.url }}" class="main-tittle">{{ post.title }}</a>
-        <!-- Tags -->
-        {% if post.taxonomy.tag | length > 0 %}
-            <div class="tagi">
-                {% for tag in post.taxonomy.tag %}
-                    <a href="{{ base_url }}/tag{{ config.system.param_sep }}{{ tag }}">{{ tag }}</a>
-                {% endfor %}
-            </div>
-        {% endif %}
-        <p>{{ post.content | striptags | truncate(115) }}</p>
-        <a href="{{ post.url }}" class="btn btn-color btn-flat">Read Post</a>
+        <div>Posted by:
+            {{ config.site.author.name }}
+        </div>
+        <div>Date Posted:
+            {{ post.date | date("m/d/Y") }}
+        </div>
     </div>
+    {% if post.taxonomy.tag | length > 0 %}
+        <div class="tagi">
+            {% for tag in post.taxonomy.tag %}
+                <a href="{{ base_url }}/tag{{ config.system.param_sep }}{{ tag }}">{{ tag }}</a>
+            {% endfor %}
+        </div>
+    {% endif %}
+    <p>{{ post.content | striptags | truncate(115) }}</p>
+    <a href="{{ post.url }}" class="btn btn-color btn-flat">Read Post</a>
 </div>
 {# {{ post.media[post.header.cover].cropResize(500,500).url }} #}

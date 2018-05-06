@@ -25,5 +25,5 @@ seo:
     type: website
     description: Gallery of past works I have made.
     keywords: work, past, projects, jslhub, aishazart, alancrytex
-    image:
+    image: seo.png
 ---

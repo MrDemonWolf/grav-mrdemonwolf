@@ -4,12 +4,12 @@ menu: Blog
 header:
     enabled: true
     title: Blog
-visible: false
+visible: true
 seo:
     type: website
     description:
     keywords: blog
-    image:
+    image: seo.png
 content:
   items: '@self.children'
   order:

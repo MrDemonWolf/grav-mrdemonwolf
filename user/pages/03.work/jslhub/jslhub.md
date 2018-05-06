@@ -1,5 +1,6 @@
 ---
 title: JSL Hub
+template: workShowcase
 work_title: JSLHub
 work_name: jslhub
 workWhy: After getting him setup with image sharing I asked if he wanted a personal website.  With the limited copywriteing still was able to make a site just for him.

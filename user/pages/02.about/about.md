@@ -24,5 +24,5 @@ seo:
     type: website
     description: About Nathan Henniges.
     keywords: ux designer, front-end devloper, front-end development ,gamer, streamer, youtuber, about, about me
-    image: change.png
+    image: seo.png
 ---

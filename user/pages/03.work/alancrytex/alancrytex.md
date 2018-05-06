@@ -1,5 +1,6 @@
 ---
 title: Alancrytex
+template: workShowcase
 work_title: Alancrytex
 work_name: alancrytex
 workWhy: Used a service called Wix before which was on there free plan with slow load times, wix branding, limited control.  Talked with him about a way he can have free website hosting but still be able to make edits.

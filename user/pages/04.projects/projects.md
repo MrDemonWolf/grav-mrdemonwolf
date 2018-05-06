@@ -9,5 +9,5 @@ seo:
     type: website
     description:
     keywords:
-    image:
+    image: seo.png
 ---
