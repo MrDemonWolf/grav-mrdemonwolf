@@ -1,4 +1,6 @@
 <div class="col-6 post">
+    {% if page.header. %}{% endif %}
+
     <img class="img-thumbnail post-image" src="http://i50.tinypic.com/2nbf0ht.jpg" alt="blog post image">
     <div class="post-meta">
         <div class="title">
@@ -12,7 +14,7 @@
         </div>
     </div>
     {% if post.taxonomy.tag | length > 0 %}
-        <div class="tagi">
+        <div class="tags">
             {% for tag in post.taxonomy.tag %}
                 <a href="{{ base_url }}/tag{{ config.system.param_sep }}{{ tag }}">{{ tag }}</a>
             {% endfor %}
