@@ -2,8 +2,7 @@
 {% block content %}
     <!--Hero -->
     {% for hero in page.header.hero %}
-        {% set image = page.media[hero.src].quality(100) %}
-        {% set image_url = image.url %}
+        {% set image_url = page.media[hero.src].url %}
         <div class="hero" style="background: url({{ image_url }}) no-repeat bottom center; background-size:cover;">
             <div class="container">
                 <div class="inner-hero">
