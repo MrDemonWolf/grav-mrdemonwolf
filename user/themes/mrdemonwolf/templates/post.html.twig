@@ -3,7 +3,7 @@
 {% block content %}
     <div class="post">
         {% include 'partials/post-header.html.twig' %}
-        <div class="container post-content">
+        <div class="container inner">
             <div class="row">
                 <div class="col-md-8 content">
                     {{ content }}
@@ -12,14 +12,14 @@
                     <div class="post-sidebar">
                         <div class="side-content">
                             <div class="author">
-                                <div class="headshot"><img src="{{ url('theme://images/profile_pic.png') }}" alt="{{ config.site.author.name }} Headshot" class="img-thumbnail"></div>
-                                <div class="name">{{ config.site.author.name }}</div>
+                                <div class="headshot d-flex justify-content-center"><img src="{{ url('theme://images/profile_pic.png') }}" alt="{{ config.site.author.name }} Headshot" class="img-thumbnail"></div>
+                                <div class="name text-center">{{ config.site.author.name }}</div>
                             </div>
                         </div>
                         <div class="side-content">
                             <div class="post-meta">
                                 <i class="far fa-calendar meta-icons"></i>
-                                <spam class="meta-text" datetime="{{ page.date| nicetime(false) }}">{{ page.date| nicetime(false) }}</spam>
+                                <spam class="meta-tex" datetime="{{ page.date| nicetime(false) }}">{{ page.date| nicetime(false) }}</spam>
                             </div>
                         </div>
                         <div class="side-content">
@@ -65,6 +65,28 @@
                                     <div class="fb-share-button" data-href="{{ page.url(true)}}" data-layout="button" data-size="large" data-mobile-iframe="true">
                                         <a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u={{ page.url(true) | url_encode(true)}}&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Share</a>
                                     </div>
+                                </div>
+                                <div class="googleplus">
+                                    <!-- Place this tag where you want the share button to render. -->
+                                    <div class="g-plus" data-action="share" data-height="24"></div>
+
+                                    <!-- Place this tag after the last share tag. -->
+                                    <script type="text/javascript">
+                                        (function () {
+                                            var po = document.createElement('script');
+                                            po.type = 'text/javascript';
+                                            po.async = true;
+                                            po.src = 'https://apis.google.com/js/platform.js';
+                                            var s = document.getElementsByTagName('script')[0];
+                                            s.parentNode.insertBefore(po, s);
+                                        })();
+                                    </script>
+                                </div>
+                                <div class="email">
+                                    <a class="btn btn-primary btn-sm" href=" mailto:?subject=" Checkout" this=" this" post=" post" {{ page.title }} &amp;body=" check%20out%20this%20post%20you!%20" {{ page.url(true) }} "="Check%20out%20this%20post%20you!%20" {{ page.url(true) }} "">
+                                        <i class="fas fa-envelope"></i>
+                                        Share
+                                    </a>
                                 </div>
                             </div>
                         </div>
