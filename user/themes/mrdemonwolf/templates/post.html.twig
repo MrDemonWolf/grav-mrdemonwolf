@@ -84,7 +84,7 @@
                                     </script>
                                 </div>
                                 <div class="email">
-                                    <a class="btn btn-primary btn-sm" href=" mailto:?subject=" Checkout" this=" this" post=" post" {{ page.title }} &amp;body=" check%20out%20this%20post%20you!%20" {{ page.url(true) }} "="Check%20out%20this%20post%20you!%20" {{ page.url(true) }} "">
+                                    <a class="btn btn-primary btn-sm" href=" mailto:?subject=Check%20out%20this%20post!%20%20{{ page.title | url_encode(true) }}&amp;body={{ page.url(true) | url_encode(true) }}">
                                         <i class="fas fa-envelope"></i>
                                         Share
                                     </a>
