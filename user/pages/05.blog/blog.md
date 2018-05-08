@@ -4,7 +4,7 @@ menu: Blog
 header:
     enabled: true
     title: Blog
-visible: false
+visible: true
 seo:
     type: website
     description:

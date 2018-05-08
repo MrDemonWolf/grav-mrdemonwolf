@@ -2,14 +2,7 @@
 
 {% block content %}
     <div class="post">
-        <div class="container-fluid p-0">
-            <div class="hero">
-                <div class="author">
-                    <div class="headshot"><img src="{{ url('theme://images/profile_pic.png') }}" alt="{{ config.site.author.name }} Headshot" class="img-thumbnail"></div>
-                    <div class="name">{{ config.site.author.name }}</div>
-                </div>
-            </div>
-        </div>
+        {% include 'partials/post-header.html.twig' %}
         <div class="container post-content">
             <div class="row">
                 <div class="col-md-8 content">
@@ -17,6 +10,12 @@
                 </div>
                 <div class="col-md-4">
                     <div class="post-sidebar">
+                        <div class="side-content">
+                            <div class="author">
+                                <div class="headshot"><img src="{{ url('theme://images/profile_pic.png') }}" alt="{{ config.site.author.name }} Headshot" class="img-thumbnail"></div>
+                                <div class="name">{{ config.site.author.name }}</div>
+                            </div>
+                        </div>
                         <div class="side-content">
                             <div class="post-meta">
                                 <i class="far fa-calendar meta-icons"></i>
@@ -37,10 +36,38 @@
                             <div class="side-content">
                                 <i class="fas fa-comments meta-icons"></i>
                                 <a href="{{ site.subpath }}{{ post.url }}#disqus_thread">
-                                    <span class="disqus-comment-count meta-text" data-disqus-url="{{ site.subpath }}{{ post.url}}">No Comments</span>
+                                    <span class="disqus-comment-count meta-text" data-disqus-url="{{ page.url(true)  }}">No Comments</span>
                                 </a>
                             </div>
                         {% endif %}
+                        <div class="side-content">
+                            <div class="share">
+                                <div class="twitter">
+                                    <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-size="large" data-text="Check out this blog post " data-via="mrdemonwolf" data-related="mrdemonwolf" data-show-count="false">Tweet</a>
+                                    <script async="async" src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                                </div>
+                                <div class="facebook">
+                                    <!-- Load Facebook SDK for JavaScript -->
+                                    <div id="fb-root"></div>
+                                    <script>
+                                        (function (d, s, id) {
+                                            var js,
+                                                fjs = d.getElementsByTagName(s)[0];
+                                            if (d.getElementById(id))
+                                                return;
+                                            js = d.createElement(s);
+                                            js.id = id;
+                                            js.src = 'https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.0';
+                                            fjs.parentNode.insertBefore(js, fjs);
+                                        }(document, 'script', 'facebook-jssdk'));
+                                    </script>
+                                    <!-- Your share button code -->
+                                    <div class="fb-share-button" data-href="{{ page.url(true)}}" data-layout="button" data-size="large" data-mobile-iframe="true">
+                                        <a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u={{ page.url(true) | url_encode(true)}}&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Share</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

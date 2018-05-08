@@ -1,0 +1,15 @@
+{% set cover = page.media[page.header.cover].quality(100) %}
+{% set post_header = cover.url %}
+<div class="jumbotron post_header" style="background-image: url('{{ post_header }}'); background-size: cover;">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 text-center">
+                <div class="inner">
+                    <div class="text">
+                        <div class="header">{{ page.header.title }}</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

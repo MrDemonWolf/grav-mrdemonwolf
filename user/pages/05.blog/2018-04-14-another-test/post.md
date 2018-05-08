@@ -12,7 +12,7 @@ seo:
   image:
   description: 'Jekyll is a Ruby-based web service that neatly converts markdown documents into static HTML pages. No more hassle with a CMS or database and you immediately have a minimalist personal website. Jekyll is also the engine of Github Pages, allowing you to host your own Jekyll website on Pages for free. But then the question: how do I do that?'
 description: 'Jekyll changed my perspectives. I want to take the time to summarize my experiences with WordPress prior to Jekyll to compare how effective Jekyll has been over the past year.'
-cover: change.jpeg
+cover: cover.png
 comments: true
 ---
 Leverage agile frameworks to provide a robust synopsis for high level overviews. Iterative approaches to corporate strategy foster collaborative thinking to further the overall value proposition. Organically grow the holistic world view of disruptive innovation via workplace diversity and empowerment.
