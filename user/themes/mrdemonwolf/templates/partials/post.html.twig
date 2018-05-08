@@ -17,6 +17,8 @@
             {% endfor %}
         </div>
     {% endif %}
+    <i class="fas fa-clock"></i>
+    <span class="readTime">{{ post.content | readingtime }}</span>
     <p>{{ post.content | striptags | truncate(115) }}</p>
     <a href="{{ post.url }}" class="btn btn-color btn-flat">Read Post</a>
 </div>
