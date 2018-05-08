@@ -8,6 +8,24 @@
         margin-top: 24px;
     }
 
+    .content {
+        font-family: $second-font;
+        font-size: 1.15em;
+        color: #000000;
+
+        .bold {
+            font-weight: 700;
+        }
+
+        a {
+            color: #858585;
+            &:hover {
+              text-decoration: none;
+              color: #1d1d1d;
+            }
+        }
+    }
+
     .hero {
         height: 350px;
         background-color: #000000;

@@ -3,11 +3,21 @@
 {% block content %}
     <div class="blog">
         <div class="container">
+            {% include 'partials/simplesearch_searchbox.html.twig' %}
+            </div>
+        <div class="container">
             <div class="row">
                 {% set collection = page.collection() %}
                 {% for post in collection %}
                     {% include 'partials/post.html.twig' %}
                 {% endfor %}
+                {% if collection | length == 0 %}
+                    <div class="no-posts m-auto">
+                        <i class="fas fa-exclamation-circle icon"></i>
+                        Sorry but blog posts could be found. Please try again later.
+                    </div>
+                {% endif %}
+
             </div>
         </div>
         {% if config.plugins.pagination.enabled and collection.params.pagination %}

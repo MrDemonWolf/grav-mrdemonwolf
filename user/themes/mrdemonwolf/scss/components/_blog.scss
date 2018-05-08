@@ -3,4 +3,14 @@
 // -----------------------------------------------------------------------------
 .blog {
     margin-bottom: $content_margin;
+
+    .no-posts {
+        font-family: $main-font;
+        font-weight: 700;
+        font-size: 1.15em;
+
+        .icon {
+            font-size: 1.15em;
+        }
+    }
 }

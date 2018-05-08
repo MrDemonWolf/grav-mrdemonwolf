@@ -11,9 +11,9 @@ seo:
     keywords: blog
     image: seo.png
 content:
-  items: '@self.children'
+  items: @self.children
   order:
-    by: header.date
+    by: date
     dir: desc
   pagination: true
   limit: 10
