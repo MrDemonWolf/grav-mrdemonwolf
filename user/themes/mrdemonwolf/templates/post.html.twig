@@ -33,10 +33,11 @@
                             </div>
                         </div>
                         {% if page.header.comments %}
+                            <script id="dsq-count-scr" src="https://{{ config.site.disqus }}.disqus.com/count.js" async="async"></script>
                             <div class="side-content">
                                 <i class="fas fa-comments meta-icons"></i>
                                 <a href="{{ site.subpath }}{{ post.url }}#disqus_thread">
-                                    <span class="disqus-comment-count meta-text" data-disqus-url="{{ page.url(true)  }}">No Comments</span>
+                                    <span class="disqus-comment-count meta-text" data-disqus-url="{{ page.url(true) }}">No Comments</span>
                                 </a>
                             </div>
                         {% endif %}

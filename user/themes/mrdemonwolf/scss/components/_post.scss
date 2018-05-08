@@ -19,9 +19,10 @@
 
         a {
             color: #858585;
+
             &:hover {
-              text-decoration: none;
-              color: #1d1d1d;
+                text-decoration: none;
+                color: #1d1d1d;
             }
         }
     }
@@ -51,10 +52,17 @@
         }
 
         .name {
-            font-family: $second-font;
-            font-size: 1.15em;
+            font-family: $main-font;
+            font-size: 1.25m;
             color: #000000;
+            font-weight: 700
         }
+    }
+
+    .side-content {
+        font-family: $main-font;
+        font-size: 1.15em;
+        color: #000000;
     }
 
     .share {

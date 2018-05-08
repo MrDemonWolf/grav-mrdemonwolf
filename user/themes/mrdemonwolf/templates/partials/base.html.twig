@@ -19,61 +19,62 @@
             {% block stylesheets %}
 
                 {# Boostrap CSS #}
-                {% do 
+                {% do
                     assets.addCss('theme://lib/bootstrap/css/bootstrap.min.css', 100) %}
                 {# Fancybox CSS #}
-                {% do 
+                {% do
                     assets.addCss('theme://lib/fancybox/css/jquery.fancybox.css', 100) %}
                 {# Narmailze CSS #}
-                {% do 
+                {% do
                     assets.addCss('theme://lib/normalize/css/normalize.css', 100) %}
                 {# Narmailze CSS #}
-                {% do 
+                {% do
                     assets.addCss('theme://lib/cookieconsent/css/cookieconsent.min.css', 100) %}
                 {# Narmailze CSS #}
-                {% do 
+                {% do
                     assets.addCss('theme://lib/cookies-eu-banner/css/cookies-eu-banner.default.min.css', 100) %}
                 {# Jplay Blue monday Skin CSS #}
-                {% do 
+                {% do
                     assets.addCss('theme://lib/jplayer/skin/blue.monday/css/jplayer.blue.monday.min.css', 100) %}
                 {# Font Awsome CSS #}
-                {% do assets.addCss('theme://lib/font-awesome/css/fontawesome-all.min.css', 100) %}
+                {% do
+                  assets.addCss('theme://lib/font-awesome/css/fontawesome-all.min.css', 100) %}
                 {# Main CSS #}
-                {% do 
+                {% do
                     assets.addCss('theme://css/main.css', 100) %}
             {% endblock %}
             {{ assets.css() }}
 
             {% block javascripts %}
                 {# Jqery JS #}
-                {% do 
+                {% do
                     assets.addJs('theme://lib/jquery/js/jquery.min.js', 100) %}
                 {# Bootstrap JS #}
-                {% do 
+                {% do
                     assets.addJs('theme://lib/bootstrap/js/bootstrap.bundle.min.js', 99) %}
                 {# Lettering JS #}
-                {% do 
+                {% do
                     assets.addJs('theme://lib/letteringjs/js/jqery.lettering.js', 98) %}
                 {# Fancybox JS #}
-                {% do 
+                {% do
                     assets.addJs('theme://lib/fancybox/js/jquery.fancybox.min.js', 97) %}
                 {# Bootstrap Vaildator JS #}
-                {% do 
+                {% do
                     assets.addJs('theme://lib/bootstrap-validator/js/validator.min.js', 96) %}
                 {# Cookie popup JS #}
-                {% do 
+                {% do
                     assets.addJs('theme://lib/cookies-eu-banner/js/cookies-eu-banner.min.js', 95) %}
                 {# Jplayer JS #}
-                {% do 
+                {% do
                     assets.addJs('theme://lib/jplayer/js/jquery.jplayer.min.js', 94) %}
                 {# Bootstrap Notify JS #}
-                {% do 
+                {% do
                     assets.addJs('theme://lib/bootstrap-notify/js/bootstrap-notify.min.js', 93) %}
                 {# Momentjs JS #}
-                {% do 
+                {% do
                     assets.addJs('theme://lib/momentjs/js/moment.min.js', 92) %}
                 {# Main JS #}
-                {% do 
+                {% do
                     assets.addJs('theme://js/main.js', 91) %}
             {% endblock %}
             {{ assets.js() }}

@@ -17,4 +17,8 @@ content:
     dir: desc
   pagination: true
   limit: 10
+simplesearch:
+  filters:
+    - @self
+    - @taxonomy: [tag]
 ---
