@@ -18,7 +18,8 @@ content:
   pagination: true
   limit: 10
 simplesearch:
-  filters:
-    - @self
-    - @taxonomy: [tag]
+    filters:
+        - @self
+        - @taxonomy: [tag]
+    filter_combinator: and
 ---

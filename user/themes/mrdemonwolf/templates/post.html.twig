@@ -25,7 +25,7 @@
                         <div class="side-content">
                             <div class="post-meta">
                                 <i class="fas fa-tags meta-icons"></i>
-                                <div class="post-tags">
+                                <div class="post-tags d-inlineh">
                                     {% for tag in page.taxonomy.tag | slice(0, 4) %}
                                         <a class="meta-text" href="{{ base_url_absolute }}/tags/#{{ tag }}">{{ tag }}</a>
                                     {% endfor %}

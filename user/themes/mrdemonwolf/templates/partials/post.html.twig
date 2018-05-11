@@ -1,25 +1,27 @@
-<div class="col-6 post">
-    <a href="{{ post.url }}">
+<div class="col-12 col-md-6 col-xl-6 post">
+    <div class="overlay">
         <img class="img-thumbnail post-image" src="http://i50.tinypic.com/2nbf0ht.jpg" alt="blog post image">
-    </a>
+        <a class="btn btn-primary btn-sm read" href="{{ post.url }}">Read More</a>
+    </div>
     <div class="post-meta">
         <div class="title">{{ post.title }}</div>
-        <i class="far fa-calendar-alt" aria-hidden="true"></i>
-        <span>
+        <div class="date">
+            <i class="far fa-calendar-alt" aria-hidden="true"></i>
             {{ post.date | date("m/d/Y") }}
-        </span>
-    </div>
-    {% if post.taxonomy.tag | length > 0 %}
-        <div class="tags">
-            <i class="fas fa-tags" aria-hidden="true"></i>
-            {% for tag in post.taxonomy.tag %}
-                <a href="{{ base_url }}/tag{{ config.system.param_sep }}{{ tag }}">{{ tag }}</a>
-            {% endfor %}
         </div>
-    {% endif %}
-    <i class="fas fa-clock"></i>
-    <span class="readTime">{{ post.content | readingtime }}</span>
-    <p>{{ post.content | striptags | truncate(115) }}</p>
-    <a class="btn btn-primary btn-sm" href="{{ post.url }}">Read More</a>
+        {% if post.taxonomy.tag | length > 0 %}
+            <div class="tags">
+                <i class="fas fa-tags d-inline" aria-hidden="true"></i>
+                {% for tag in post.taxonomy.tag %}
+                    <a href="{{ base_url }}/tag{{ config.system.param_sep }}{{ tag }}">{{ tag }}</a>
+                {% endfor %}
+            </div>
+        {% endif %}
+        <div class="read-time">
+            <i class="fas fa-clock"></i>
+            <span class="readTime">{{ post.content | readingtime }}</span>
+        </div>
+        <span class="summary">{{ post.content | striptags | truncate(115) }}</p>
+    </div>
 </div>
 {# {{ post.media[post.header.cover].cropResize(500,500).url }} #}

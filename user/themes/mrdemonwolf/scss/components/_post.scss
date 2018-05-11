@@ -3,6 +3,22 @@
 // -----------------------------------------------------------------------------
 .post {
   margin-bottom: $content_margin;
+  .overlay {
+    display: inline-block;
+    position: relative;
+    img {
+      background-color: transparent;
+      border: none;
+      border-radius: 0;
+    }
+    .read {
+      width: 50%;
+      position: absolute;
+      bottom: 4px;
+      right: 4px;
+      border-radius: 0;
+    }
+  }
   .inner {
     margin-top: 24px;
   }
@@ -29,9 +45,6 @@
     background-size: cover;
     position: relative;
     text-align: center;
-  }
-  .post-tags {
-    display: inline;
   }
   .author {
     img {
@@ -77,6 +90,28 @@
         &:hover {
           background: lighten($brand-color-alt, 0.25);
           border: none;
+        }
+      }
+    }
+  }
+  .post-meta {
+    .title {
+      font-family: $main-font;
+      font-weight: 700;
+      font-size: 1.25em
+    }
+    .date,
+    .tags,
+    .read-time,
+    .summary {
+      font-family: $second-font;
+      font-size: 1.15em;
+    }
+    .tags {
+      a {
+        &:hover {
+          text-decoration: none !important;
+          color: $brand-color;
         }
       }
     }

@@ -2,6 +2,7 @@
 title: 'fefe 123'
 date: '5/01/2015 07:59'
 taxonomy:
+    category: blog
     tag:
         - github
         - jekyll
