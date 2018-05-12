@@ -2,49 +2,42 @@
 // This file contains all styles related to the work component.
 // ----------------------------------------------------------------------------
 .work {
-    margin-bottom: $content_margin;
-
-    .thumbnail {
-        border: none;
+  margin-bottom: $content_margin;
+  .thumbnail {
+    border: none;
+  }
+  .gallery {
+    display: inline-block;
+    margin-top: 25px;
+  }
+  a.thumbnail:hover,
+  a.thumbnail:focus,
+  a.thumbnail.active {
+    border-color: $brand-color-alt;
+  }
+  .work-name {
+    font-size: 1.25em;
+    text-align: center;
+    text-decoration: none;
+    &:hover {
+      text-decoration: none;
     }
-
-    .gallery {
-        display: inline-block;
-        margin-top: 25px;
-    }
-
-    a.thumbnail:hover, a.thumbnail:focus, a.thumbnail.active {
-        border-color: $brand-color-alt;
-    }
-
-    .work-name {
-        font-size: 1.25em;
-        text-align: center;
-        text-decoration: none;
-
-        &:hover {
-            text-decoration: none;
-        }
-    }
-
-    .title {
-        color: $brand-color;
-        font-family: $main-font;
-        font-size: 2.5em;
-    }
-
-    .header {
-        font-family: $main-font;
-        font-size: 1.5em;
-        font-weight: 700;
-    }
-
-    .subheader {
-        font-family: $second-font;
-        font-size: 1.25em;
-    }
-
-    .colors {
-        display: block;
-    }
+  }
+  .title {
+    color: $brand-color;
+    font-family: $main-font;
+    font-size: 2.5em;
+  }
+  .header {
+    font-family: $main-font;
+    font-size: 1.5em;
+    font-weight: 700;
+  }
+  .subheader {
+    font-family: $second-font;
+    font-size: 1.25em;
+  }
+  .colors {
+    display: block;
+  }
 }

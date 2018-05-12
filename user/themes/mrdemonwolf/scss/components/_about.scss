@@ -2,47 +2,37 @@
 // This file contains all styles related to the about component.
 // -----------------------------------------------------------------------------
 .about {
-    margin-bottom: $content_margin;
-
+  margin-bottom: $content_margin;
+  .profile_pic {
+    @extend .img-circle;
+    max-width: 75%; // display: flex;
+    // justify-content: center;
+    // margin: 0px auto;
+    background-color: $profile_pic-bg;
+  }
+  .text {
+    font-family: $main-font;
+    font-size: 1.15em;
+    font-style: normal;
+    a:hover {
+      text-decoration: none;
+    }
+  }
+  .social {
+    font-size: 1.5em;
+    ul {
+      display: flex;
+      justify-items: center;
+      li {
+        padding-right: 8px;
+      }
+    }
+  }
+  @media (max-width: 991px) {
     .profile_pic {
-        @extend .img-circle;
-
-        max-width: 75%;
-
-        // display: flex;
-        // justify-content: center;
-        // margin: 0px auto;
-        background-color: $profile_pic-bg;
+      float: none;
+      margin: 0 auto;
+      display: flex;
     }
-
-    .text {
-        font-family: $main-font;
-        font-size: 1.15em;
-        font-style: normal;
-
-        a:hover {
-            text-decoration: none;
-        }
-    }
-
-    .social {
-        font-size: 1.5em;
-
-        ul {
-            display: flex;
-            justify-items: center;
-
-            li {
-                padding-right: 8px;
-            }
-        }
-    }
-
-    @media (max-width: 991px) {
-        .profile_pic {
-            float: none;
-            margin: 0 auto;
-            display: flex;
-        }
-    }
+  }
 }

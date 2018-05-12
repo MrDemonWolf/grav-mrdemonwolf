@@ -2,160 +2,138 @@
 // This file contains all styles related to the hero component.
 // -----------------------------------------------------------------------------
 .hero {
-    color: white;
-    background: url(../images/hero_bg.png) no-repeat bottom center;
-    background-size: cover;
-    width: 100%;
-    height: 100vh;
-    display: inline-flex;
+  color: white;
+  background: url(../images/hero_bg.png) no-repeat bottom center;
+  background-size: cover;
+  width: 100%;
+  height: 100vh;
+  display: inline-flex;
+  padding-top: 27px;
+  padding-bottom: 27px;
+  margin: 0;
+  position: relative;
+  .inner-hero {
+    background-color: transparent !important;
     padding-top: 27px;
     padding-bottom: 27px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .text {
+    color: #ffffff;
+    font-family: $main-font;
+    font-size: 3.15em;
+    display: inline-block;
     margin: 0;
-    position: relative;
-
-    .inner-hero {
-        background-color: transparent !important;
-        padding-top: 27px;
-        padding-bottom: 27px;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
+  }
+  .animate-text {
+    font-family: $main-font;
+    font-size: 2.15em;
+    display: flex;
+    justify-content: center;
+    & span {
+      position: absolute;
+      opacity: 0;
+      overflow: hidden;
+      color: $hero-animate-text;
+      animation: animateWord 18s linear infinite 0s;
     }
-
-    .text {
-        color: #ffffff;
-        font-family: $main-font;
-        font-size: 3.15em;
-        display: inline-block;
-        margin: 0;
+    &>span:nth-child(2) {
+      animation-delay: 3s;
+      color: $hero-animate-text;
     }
-
+    &>span:nth-child(3) {
+      animation-delay: 6s;
+      color: $hero-animate-text;
+    }
+    &>span:nth-child(4) {
+      animation-delay: 9s;
+      color: $hero-animate-text;
+    }
+    &>span:nth-child(5) {
+      animation-delay: 12s;
+      color: $hero-animate-text;
+    }
+    &>span:nth-child(6) {
+      animation-delay: 15s;
+      color: $hero-animate-text;
+    }
+  }
+  .social {
+    padding-top: 4em;
+    display: flex;
+    justify-content: center;
+    ul {
+      padding-left: 0;
+      li {
+        float: left;
+        display: flex;
+        .last {
+          margin-right: 0;
+        }
+      }
+      .social-icon {
+        width: 40px;
+        height: 40px;
+        font-size: 24px;
+        background-color: $social-icon;
+        text-align: center;
+        margin-right: 18px;
+        margin-bottom: 18px;
+        padding-top: 8px;
+        border-radius: 50%;
+        &:hover {
+          background-color: $social-icon_hover;
+          color: #ffffff !important;
+          transition: 500ms;
+        }
+      }
+    }
+  }
+  @keyframes animateWord {
+    0% {
+      opacity: 0;
+    }
+    2% {
+      opacity: 0;
+      transform: translateY(-30px);
+    }
+    5% {
+      opacity: 1;
+      transform: translateY(0px);
+    }
+    17% {
+      opacity: 1;
+      transform: translateY(0px);
+    }
+    20% {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    80% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+  @media (max-width: 776px) {
+    .hero-social {
+      li {
+        float: left;
+      }
+    }
+  }
+  @media (max-width: 611px) {
     .animate-text {
-        font-family: $main-font;
-        font-size: 2.15em;
-        display: flex;
-        justify-content: center;
-
-        & span {
-            position: absolute;
-            opacity: 0;
-            overflow: hidden;
-            color: $hero-animate-text;
-            animation: animateWord 18s linear infinite 0s;
-        }
-
-        & > span:nth-child(2) {
-            animation-delay: 3s;
-            color: $hero-animate-text;
-        }
-
-        & > span:nth-child(3) {
-            animation-delay: 6s;
-            color: $hero-animate-text;
-        }
-
-        & > span:nth-child(4) {
-            animation-delay: 9s;
-            color: $hero-animate-text;
-        }
-
-        & > span:nth-child(5) {
-            animation-delay: 12s;
-            color: $hero-animate-text;
-        }
-
-        & > span:nth-child(6) {
-            animation-delay: 15s;
-            color: $hero-animate-text;
-        }
+      justify-content: left;
     }
-
+  }
+  @media (max-width: 592px) {
     .social {
-        padding-top: 4em;
-        display: flex;
-        justify-content: center;
-
-        ul {
-            padding-left: 0;
-
-            li {
-                float: left;
-                display: flex;
-                .last {
-                    margin-right: 0;
-                }
-            }
-
-            .social-icon {
-                width: 40px;
-                height: 40px;
-                font-size: 24px;
-                background-color: $social-icon;
-                text-align: center;
-                margin-right: 18px;
-                margin-bottom: 18px;
-                padding-top: 8px;
-                border-radius: 50%;
-
-                &:hover {
-                    background-color: $social-icon_hover;
-                    color: #ffffff !important;
-                    transition: 500ms;
-                }
-            }
-        }
+      padding-top: 6em
     }
-
-    @keyframes animateWord {
-        0% {
-            opacity: 0;
-        }
-
-        2% {
-            opacity: 0;
-            transform: translateY(-30px);
-        }
-
-        5% {
-            opacity: 1;
-            transform: translateY(0px);
-        }
-
-        17% {
-            opacity: 1;
-            transform: translateY(0px);
-        }
-
-        20% {
-            opacity: 0;
-            transform: translateY(30px);
-        }
-
-        80% {
-            opacity: 0;
-        }
-
-        100% {
-            opacity: 0;
-        }
-    }
-
-    @media (max-width: 776px) {
-        .hero-social {
-            li {
-                float: left;
-            }
-        }
-    }
-
-    @media (max-width: 611px) {
-        .animate-text {
-            justify-content: left;
-        }
-
-        .hero-social {
-            padding-top: 6em;
-        }
-    }
+  }
 }

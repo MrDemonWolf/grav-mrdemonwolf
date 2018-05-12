@@ -1,217 +1,198 @@
 // -----------------------------------------------------------------------------
 // This file contains all styles related to the header of the site/application.
 // -----------------------------------------------------------------------------
-/* _nav.scss */
 @media (max-width: 768px) {
-    .logo-desktop {
-        display: none;
-    }
-
-    .logo-mobile {
-        display: block !important;
-    }
-
-    .navbar-brand {
-        padding: 2px 10px !important;
-    }
+  .logo-desktop {
+    display: none;
+  }
+  .logo-mobile {
+    display: block !important;
+  }
+  .navbar-brand {
+    padding: 2px 10px !important;
+  }
 }
 
-.navbar-logo > img {
-    height: 50px;
-    padding-top: 4px;
-    padding-bottom: 4px;
+.navbar-logo>img {
+  height: 50px;
+  padding-top: 4px;
+  padding-bottom: 4px;
 }
 
 .logo-mobile {
-    display: none;
+  display: none;
 }
 
 .navbar {
-    background-color: $nav-bgDefault;
-
-    .navbar-brand {
-        color: $nav-colDefault;
-
-        &:hover, &:focus {
+  background-color: $nav-bgDefault;
+  .navbar-brand {
+    color: $nav-colDefault;
+    &:hover,
+    &:focus {
+      color: $nav-colHighlight;
+    }
+  }
+  .navbar-text {
+    color: $nav-colDefault;
+    a {
+      color: $nav-colHighlight;
+      &:hover,
+      &:focus {
+        color: $nav-colHighlight;
+      }
+    }
+  }
+  .navbar-nav {
+    .nav-link {
+      color: $nav-colDefault;
+      border-radius: .25rem;
+      margin: 0 0.25em;
+      &:not(.disabled) {
+        &:hover,
+        &:focus {
+          color: $nav-colHighlight;
+        }
+      }
+    }
+    @if $nav-dropdown {
+      .dropdown-menu {
+        background-color: $nav-bgDefault;
+        border-color: $nav-bgHighlight;
+        .dropdown-item {
+          color: $nav-colDefault;
+          &:hover,
+          &:focus,
+          &.active {
             color: $nav-colHighlight;
+            background-color: $nav-bgHighlight;
+          }
         }
-    }
-
-    .navbar-text {
-        color: $nav-colDefault;
-
-        a {
-            color: $nav-colHighlight;
-
-            &:hover, &:focus {
-                color: $nav-colHighlight;
-            }
+        .dropdown-divider {
+          border-top-color: $nav-bgHighlight;
         }
+      }
     }
-
-    .navbar-nav {
-        .nav-link {
-            color: $nav-colDefault;
-            border-radius: .25rem;
-            margin: 0 0.25em;
-
-            &:not(.disabled) {
-                &:hover, &:focus {
-                    color: $nav-colHighlight;
-                }
-            }
-        }
-
-        @if $nav-dropdown {
-            .dropdown-menu {
-                background-color: $nav-bgDefault;
-                border-color: $nav-bgHighlight;
-
-                .dropdown-item {
-                    color: $nav-colDefault;
-
-                    &:hover, &:focus, &.active {
-                        color: $nav-colHighlight;
-                        background-color: $nav-bgHighlight;
-                    }
-                }
-
-                .dropdown-divider {
-                    border-top-color: $nav-bgHighlight;
-                }
-            }
-        }
-
-        .nav-item.active, .nav-item.show {
-            .nav-link, .nav-link:hover, .nav-link:focus {
-                color: $nav-colHighlight;
-                background-color: $nav-bgHighlight;
-            }
-        }
+    .nav-item.active,
+    .nav-item.show {
+      .nav-link,
+      .nav-link:hover,
+      .nav-link:focus {
+        color: $nav-colHighlight;
+        background-color: $nav-bgHighlight;
+      }
     }
-
-    .navbar-toggler {
-        border-color: $nav-toggleBorder;
-
-        &:hover, &:focus {
-            background-color: $nav-toggleBackground;
-        }
+  }
+  .navbar-toggler {
+    border-color: $nav-toggleBorder;
+    &:hover,
+    &:focus {
+      background-color: $nav-toggleBackground;
     }
-
-    .navbar-toggler-icon {
-        color: $nav-toggleIcon;
+  }
+  .navbar-toggler-icon {
+    color: $nav-toggleIcon;
+  }
+  .navbar-collapse,
+  .navbar-form {
+    border-color: $nav-colDefault;
+  }
+  .navbar-link {
+    color: $nav-colDefault;
+    &:hover {
+      color: $nav-colHighlight;
     }
-
-    .navbar-collapse,
-    .navbar-form {
-        border-color: $nav-colDefault;
-    }
-
-    .navbar-link {
-        color: $nav-colDefault;
-
-        &:hover {
-            color: $nav-colHighlight;
-        }
-    }
+  }
 }
 
 @media (max-width: 575px) {
-    .navbar-expend-sm .navbar-nav .show .dropdown-menu {
-        .dropdown-item {
-            color: $nav-colDefault;
-
-            &:hover, &:focus {
-                color: $nav-colHighlight;
-            }
-        }
-
-        .dropdown-item.active {
-            color: $nav-colHighlight;
-            background-color: $nav-bgHighlight;
-        }
+  .navbar-expend-sm .navbar-nav .show .dropdown-menu {
+    .dropdown-item {
+      color: $nav-colDefault;
+      &:hover,
+      &:focus {
+        color: $nav-colHighlight;
+      }
     }
+    .dropdown-item.active {
+      color: $nav-colHighlight;
+      background-color: $nav-bgHighlight;
+    }
+  }
 }
 
 @media (max-width: 767px) {
-    .navbar-expend-md .navbar-nav .show .dropdown-menu {
-        .dropdown-item {
-            color: $nav-colDefault;
-
-            &:hover, &:focus {
-                color: $nav-colHighlight;
-            }
-        }
-
-        .dropdown-item.active {
-            color: $nav-colHighlight;
-            background-color: $nav-bgHighlight;
-        }
+  .navbar-expend-md .navbar-nav .show .dropdown-menu {
+    .dropdown-item {
+      color: $nav-colDefault;
+      &:hover,
+      &:focus {
+        color: $nav-colHighlight;
+      }
     }
+    .dropdown-item.active {
+      color: $nav-colHighlight;
+      background-color: $nav-bgHighlight;
+    }
+  }
 }
 
 @media (max-width: 991px) {
-    .navbar-expend-lg .navbar-nav .show .dropdown-menu {
-        .dropdown-item {
-            color: $nav-colDefault;
-
-            &:hover, &:focus {
-                color: $nav-colHighlight;
-            }
-        }
-
-        .dropdown-item.active {
-            color: $nav-colHighlight;
-            background-color: $nav-bgHighlight;
-        }
+  .navbar-expend-lg .navbar-nav .show .dropdown-menu {
+    .dropdown-item {
+      color: $nav-colDefault;
+      &:hover,
+      &:focus {
+        color: $nav-colHighlight;
+      }
     }
+    .dropdown-item.active {
+      color: $nav-colHighlight;
+      background-color: $nav-bgHighlight;
+    }
+  }
 }
 
 @media (max-width: 1199px) {
-    .navbar-expend-xl .navbar-nav .show .dropdown-menu {
-        .dropdown-item {
-            color: $nav-colDefault;
-
-            &:hover, &:focus {
-                color: $nav-colHighlight;
-            }
-        }
-
-        .dropdown-item.active {
-            color: $nav-colHighlight;
-            background-color: $nav-bgHighlight;
-        }
+  .navbar-expend-xl .navbar-nav .show .dropdown-menu {
+    .dropdown-item {
+      color: $nav-colDefault;
+      &:hover,
+      &:focus {
+        color: $nav-colHighlight;
+      }
     }
+    .dropdown-item.active {
+      color: $nav-colHighlight;
+      background-color: $nav-bgHighlight;
+    }
+  }
 }
 
 .navbar-expend .navbar-nav .show .dropdown-menu {
-    .dropdown-item {
-        color: $nav-colDefault;
-
-        &:hover, &:focus {
-            color: $nav-colHighlight;
-        }
+  .dropdown-item {
+    color: $nav-colDefault;
+    &:hover,
+    &:focus {
+      color: $nav-colHighlight;
     }
-
-    .dropdown-item.active {
-        color: $nav-colHighlight;
-        background-color: $nav-bgHighlight;
-    }
+  }
+  .dropdown-item.active {
+    color: $nav-colHighlight;
+    background-color: $nav-bgHighlight;
+  }
 }
 
 .navbar {
-    margin-bottom: 0px;
-    box-shadow: 0px 2px 3px 1px rgba(0, 0, 0, 0.25);
-
-    // border-bottom: 1px solid $brand-color-alt;
+  margin-bottom: 0px;
+  box-shadow: 0px 2px 3px 1px rgba(0, 0, 0, 0.25); // border-bottom: 1px solid $brand-color-alt;
 }
 
 .navbar .navbar-nav .nav-link {
-    font-family: $main-font;
-    font-size: 1.25em;
+  font-family: $main-font;
+  font-size: 1.25em;
 }
 
-.dropdown-menu > li > a {
-    font-family: $main-font;
-    font-size: 1.25em;
+.dropdown-menu>li>a {
+  font-family: $main-font;
+  font-size: 1.25em;
 }

@@ -2,41 +2,37 @@
 // This file contains all styles related to the twitch notice component.
 // -----------------------------------------------------------------------------
 .twitchNotice {
-    &.alert-info {
-        color: #ffffff;
-        background-color: $twitch-color;
-        border-color: $twitch-color;
-        text-align: left;
+  &.alert-info {
+    color: #ffffff;
+    background-color: $twitch-color;
+    border-color: $twitch-color;
+    text-align: left;
+  }
+  .pulsing {
+    // box-shadow: inset 0 0 0 3px #FFF;
+    transition: transform 0.4s, opacity 0.4s;
+    animation: pulsing 1s infinite;
+    padding-right: 0.25em;
+    @keyframes pulsing {
+      0% {
+        transform: scale(1);
+        opacity: 1;
+      }
+      50% {
+        transform: scale(2);
+      }
+      100% {
+        transform: scale(1);
+        opacity: 0;
+      }
     }
-
-    .pulsing {
-        // box-shadow: inset 0 0 0 3px #FFF;
-        transition: transform 0.4s, opacity 0.4s;
-        animation: pulsing 1s infinite;
-        padding-right:  0.25em;
-
-        @keyframes pulsing {
-            0% {
-                transform: scale(1);
-                opacity: 1;
-            }
-
-            50% {
-                transform: scale(2);
-            }
-
-            100% {
-                transform: scale(1);
-                opacity: 0;
-            }
-        }
-    }
+  }
 }
 
 @media (max-width: 991px) {
-    .twitchNotice {
-        &.alert-info {
-            text-align: center;
-        }
+  .twitchNotice {
+    &.alert-info {
+      text-align: center;
     }
+  }
 }

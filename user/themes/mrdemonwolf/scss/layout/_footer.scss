@@ -2,50 +2,44 @@
 // This file contains all styles related to the footer of the site/application.
 // -----------------------------------------------------------------------------
 footer {
-    background-color: $footer-background;
-    padding-top: 8px;
-    padding-bottom: 8px;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-
-    .content {
-        font-size: 1em;
-        color: $footer-color;
-        padding: 10px 0;
-        margin-bottom: 0;
+  background-color: $footer-background;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  .content {
+    font-size: 1em;
+    color: $footer-color;
+    padding: 10px 0;
+    margin-bottom: 0;
+  }
+  a {
+    color: $footer-color_link;
+    text-decoration: none;
+    &:hover {
+      color: lighten($footer-color_link, 15%);
+      text-decoration: none;
     }
-
-    a {
-        color: $footer-color_link;
-        text-decoration: none;
-
-        &:hover {
-            color: lighten($footer-color_link, 15%);
-            text-decoration: none;
-        }
-    }
+  }
 }
 
 .footer {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-
-    .content {
-        font-size: 1em;
-        color: $other-footer-color;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  .content {
+    font-size: 1em;
+    color: $other-footer-color;
+  }
+  a {
+    color: $other-footer-color_link;
+    text-decoration: none;
+    &:hover {
+      color: lighten($other-footer-color_link, 15%);
+      text-decoration: none;
     }
-
-    a {
-        color: $other-footer-color_link;
-        text-decoration: none;
-
-        &:hover {
-            color: lighten($other-footer-color_link, 15%);
-            text-decoration: none;
-        }
-    }
+  }
 }
