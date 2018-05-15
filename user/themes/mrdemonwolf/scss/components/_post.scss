@@ -41,17 +41,19 @@
     margin-top: 24px;
   }
   .content {
-    font-family: $second-font;
-    font-size: 1.15em;
-    color: #000000;
-    .bold {
-      font-weight: 700;
-    }
-    a {
-      color: #858585;
-      &:hover {
-        text-decoration: none;
-        color: #1d1d1d;
+    p {
+      font-family: $second-font;
+      font-size: 1.15em;
+      color: #000000;
+      .bold {
+        font-weight: 700;
+      }
+      a {
+        color: #858585;
+        &:hover {
+          text-decoration: none;
+          color: #1d1d1d;
+        }
       }
     }
   }
@@ -80,21 +82,16 @@
       font-weight: 700;
     }
   }
-  .side-content {
-    font-family: $main-font;
-    font-size: 1.15em;
-    color: #000000;
-  }
-  .share {
+  .post-share {
     display: inline-flex;
-    .facebook,
-    .googleplus,
-    .email {
-      margin: 0.5em;
-    }
-    .twitter {
-      margin: 0.5em 0.5em 0.5em 0;
-    }
+    // .facebook,
+    // .googleplus,
+    // .email {
+    //   margin: 0.5em;
+    // }
+    // .twitter {
+    //   margin: 0.5em 0.5em 0.5em 0;
+    // }
     .googleplus {
       display: flex;
       align-self: center;
@@ -124,5 +121,17 @@
       font-family: $second-font;
       font-size: 1.15em;
     }
+    .meta-text,
+    .meta-icons {
+      font-size: 1.15em;
+    }
+    .meta-text {
+      font-family: $main-font;
+      color: #000000;
+    }
+  }
+  .post-share,
+  .post-meta {
+    margin-left: 28px;
   }
 }
