@@ -11,12 +11,30 @@
       border: none;
       border-radius: 0;
     }
-    .read {
-      width: 50%;
+  }
+  .cover,
+  .no-cover {
+    &.read {
+      border-radius: 0;
+      padding-left: 24px;
+      padding-right: 24px;
+    }
+  }
+  .cover {
+    &.read {
       position: absolute;
       bottom: 4px;
       right: 4px;
       border-radius: 0;
+      background: rgba(#ffffff, 0.50);
+      color: $brand-color;
+      border: none;
+    }
+  }
+  .no-cover {
+    &.read {
+      border-radius: 0;
+      background: $brand-color-alt;
     }
   }
   .inner {
@@ -98,22 +116,13 @@
     .title {
       font-family: $main-font;
       font-weight: 700;
-      font-size: 1.25em
+      font-size: 1.25em;
     }
     .date,
-    .tags,
     .read-time,
     .summary {
       font-family: $second-font;
       font-size: 1.15em;
-    }
-    .tags {
-      a {
-        &:hover {
-          text-decoration: none !important;
-          color: $brand-color;
-        }
-      }
     }
   }
 }

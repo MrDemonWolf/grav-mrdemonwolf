@@ -1,27 +1,23 @@
 <div class="col-12 col-md-6 col-xl-6 post">
     <div class="overlay">
-        <img class="img-thumbnail post-image" src="http://i50.tinypic.com/2nbf0ht.jpg" alt="blog post image">
-        <a class="btn btn-primary btn-sm read" href="{{ post.url }}">Read More</a>
+        {% if post.header.cover.enable %}
+            <img class="img-thumbnail post-image" src="{{ post.media[post.header.cover.src].cropResize(1280,720).url }}" alt="blog post image">
+            <a class="btn btn-primary btn-sm cover read" href="{{ post.url }}">Read More</a>
+        {% endif %}
     </div>
     <div class="post-meta">
         <div class="title">{{ post.title }}</div>
-        <div class="date">
+        <div class="date d-inline">
             <i class="far fa-calendar-alt" aria-hidden="true"></i>
             {{ post.date | date("m/d/Y") }}
         </div>
-        {% if post.taxonomy.tag | length > 0 %}
-            <div class="tags">
-                <i class="fas fa-tags d-inline" aria-hidden="true"></i>
-                {% for tag in post.taxonomy.tag %}
-                    <a href="{{ base_url }}/tag{{ config.system.param_sep }}{{ tag }}">{{ tag }}</a>
-                {% endfor %}
-            </div>
-        {% endif %}
-        <div class="read-time">
+        <div class="read-time d-inline">
             <i class="fas fa-clock"></i>
             <span class="readTime">{{ post.content | readingtime }}</span>
         </div>
-        <span class="summary">{{ post.content | striptags | truncate(115) }}</p>
+        <div class="summary">{{ post.content | striptags | truncate(115) }}</div>
+        {% if post.header.cover.enable == false %}
+            <a class="btn btn-primary btn-sm no-cover read" href="{{ post.url }}">Read More</a>
+        {% endif %}
     </div>
 </div>
-{# {{ post.media[post.header.cover].cropResize(500,500).url }} #}

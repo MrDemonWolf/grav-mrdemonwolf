@@ -5,10 +5,10 @@
         {% include 'partials/post-header.html.twig' %}
         <div class="container inner">
             <div class="row">
-                <div class="col-8 col-xs-12 content">
+                <div class="col-12 col-md-8 content">
                     {{ content }}
                 </div>
-                <div class="col-4 col-xs-12">
+                <div class="col-12 col-md-4">
                     <div class="post-sidebar">
                         <div class="side-content">
                             <div class="author">
@@ -25,7 +25,7 @@
                         <div class="side-content">
                             <div class="post-meta">
                                 <i class="fas fa-tags meta-icons"></i>
-                                <div class="post-tags d-inlineh">
+                                <div class="post-tags d-inline">
                                     {% for tag in page.taxonomy.tag | slice(0, 4) %}
                                         <a class="meta-text" href="{{ base_url_absolute }}/tags/#{{ tag }}">{{ tag }}</a>
                                     {% endfor %}
@@ -98,7 +98,7 @@
 
         {% if page.header.comments %}
             <div class="container">
-                <div class="col-md-12">
+                <div class="col-12">
                     <div id="disqus_thread"></div>
                 </div>
             </div>
