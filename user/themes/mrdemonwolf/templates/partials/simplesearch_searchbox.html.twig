@@ -1,7 +1,7 @@
 {% set min_chars = config.get('plugins.simplesearch.min_query_length', 3) %}
 <div class="search-wrapper">
   <div class="input-group mb-3">
-    <form name="search" class="w-100" data-simplesearch-form>
+  <form name="search" class="w-100 form-inline" data-simplesearch-form="data-simplesearch-form">
       <div class="form-group">
         <input
           name="searchfield"
@@ -16,8 +16,9 @@
           data-search-input="{{ base_url }}{{ config.plugins.simplesearch.route == '@self' ? '' : (config.plugins.simplesearch.route == '/' ? '' : config.plugins.simplesearch.route) }}/query"
         />
         {% if config.plugins.simplesearch.display_button %}
-          <button class="btn btn-outline-secondary" type="button">Button</button>
+          <button class="btn btn-outline-secondary" type="submit">Serach</button>
         {% endif %}
+      </form>
       </div>
   </div>
 </div>
