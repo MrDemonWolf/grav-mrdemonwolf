@@ -1,12 +1,5 @@
 {% extends 'partials/base.html.twig' %}
 {% block content %}
-    <script>
-        $(document).ready(function getAuthorAge() {
-            var date = '06301997'
-            var age = moment().diff(moment(date, 'MMDDYYYY'), 'years');
-            $('#age').text(`Age: ${age}`);
-        });
-    </script>
     <!-- About me -->
     <div class="about">
         <div class="container">
@@ -15,11 +8,8 @@
                     {% for picture in page.header.picture %}
                         <img src="{{ url('theme://images/profile_pic.png') }}" alt="{{ config.site.name}} picture" class="img-thumbnail profile_pic">
                     {% endfor %}
-                    <div class="name">Name:
-                        {{ config.site.author.name }}</div>
-                    <div class="location">Location:
-                        {{ config.site.author.location }}</div>
-                    <div class="age" id="age"></div>
+                    <div class="name">{{ config.site.author.name }}</div>
+                    <div class="location">{{ config.site.author.location }}</div>
                     <div class="email">
                         <a href="mailto:{{ config.site.author.email | safe_email}}">
                             {{ config.site.author.email | safe_email}}</a>

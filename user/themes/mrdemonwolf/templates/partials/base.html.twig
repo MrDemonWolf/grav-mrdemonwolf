@@ -17,7 +17,6 @@
             <link rel="canonical" href="{{ page.url(true, true) }}"/>
 
             {% block stylesheets %}
-
                 {# Boostrap CSS #}
                 {% do
                     assets.addCss('theme://lib/bootstrap/css/bootstrap.min.css', 100) %}
@@ -33,10 +32,7 @@
                 {# Narmailze CSS #}
                 {% do
                     assets.addCss('theme://lib/cookies-eu-banner/css/cookies-eu-banner.default.min.css', 100) %}
-                {# Jplay Blue monday Skin CSS #}
-                {% do
-                    assets.addCss('theme://lib/jplayer/skin/blue.monday/css/jplayer.blue.monday.min.css', 100) %}
-                {# Font Awsome CSS #}
+                {# Bootstrap Social CSS #}
                 {% do
                   assets.addCss('theme://lib/font-awesome/css/fontawesome-all.min.css', 100) %}
                 {# Main CSS #}
@@ -64,15 +60,12 @@
                 {# Cookie popup JS #}
                 {% do
                     assets.addJs('theme://lib/cookies-eu-banner/js/cookies-eu-banner.min.js', 95) %}
-                {# Jplayer JS #}
-                {% do
-                    assets.addJs('theme://lib/jplayer/js/jquery.jplayer.min.js', 94) %}
                 {# Bootstrap Notify JS #}
                 {% do
                     assets.addJs('theme://lib/bootstrap-notify/js/bootstrap-notify.min.js', 93) %}
-                {# Momentjs JS #}
+                {# Clipboard JS #}
                 {% do
-                    assets.addJs('theme://lib/momentjs/js/moment.min.js', 92) %}
+                    assets.addJs('theme://lib/clipboardjs/js/clipboard.min.js', 92) %}
                 {# Main JS #}
                 {% do
                     assets.addJs('theme://js/main.js', 91) %}

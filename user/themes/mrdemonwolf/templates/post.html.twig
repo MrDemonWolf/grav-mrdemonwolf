@@ -4,110 +4,107 @@
     <div class="post">
         {% include 'partials/post-header.html.twig' %}
         <div class="container inner">
-            <div class="meta m-auto">
-                <div class="post-meta d-inline m-0">
-                    <i class="far fa-user-circle meta-icons"></i>
-                    <a class="meta-text" href="{{ base_url_absolute }}/about">{{ config.site.author.name }}</a>
-                </div>
-                <div class="post-meta d-inline">
-                    <i class="far fa-calendar meta-icons"></i>
-                    <span class="meta-text" datetime="{{ page.date| nicetime(false) }}">{{ page.date| nicetime(false) }}</span>
-                </div>
-                <div class="post-meta d-inline">
-                    <i class="fas fa-tags meta-icons"></i>
-                    <div class="post-tags d-inline">
-                        {% for tag in page.taxonomy.tag | slice(0, 4) %}
-                            <a class="meta-text" href="{{ base_url_absolute }}/tags/#{{ tag }}">{{ tag }}</a>
-                        {% endfor %}
+            <div class="row">
+                <div class="col-sm-12 col-md-6">
+                    <div class="post-meta author_pic">
+                        <img class="img-thumbnail" src="{{ url('theme://images/profile_pic.png')}}" alt="{{ config.site.author.name }} Picture">
                     </div>
                 </div>
-                <div class="post-share">
-                    <div class="twitter">
-                        <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-size="large" data-text="Check out this blog post " data-via="mrdemonwolf" data-related="mrdemonwolf" data-show-count="false">Tweet</a>
-                        <script async="async" src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-                    </div>
-                    <div class="facebook">
-                        <!-- Load Facebook SDK for JavaScript -->
-                        <div id="fb-root"></div>
-                        <script>
-                            (function (d, s, id) {
-                                var js,
-                                    fjs = d.getElementsByTagName(s)[0];
-                                if (d.getElementById(id))
-                                    return;
-                                js = d.createElement(s);
-                                js.id = id;
-                                js.src = 'https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.0';
-                                fjs.parentNode.insertBefore(js, fjs);
-                            }(document, 'script', 'facebook-jssdk'));
-                        </script>
-                        <!-- Your share button code -->
-                        <div class="fb-share-button" data-href="{{ page.url(true)}}" data-layout="button" data-size="large" data-mobile-iframe="true">
-                            <a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u={{ page.url(true) | url_encode(true)}}&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Share</a>
+                <div class="col-sm-12 col-md-6">
+                    <div class="post-meta">
+                        <i class="far fa-user-circle meta-icons"></i>
+                        <a class="meta-text" href="{{ base_url_absolute }}/about">{{ config.site.author.name }}</a>
+                        <div class="post-meta ">
+                            <i class="far fa-calendar meta-icons"></i>
+                            <span class="meta-text">Posted</span>
+                            <span class="meta-text" datetime="{{ page.date| nicetime(false) }}">{{ page.date| nicetime(false) }}</span>
                         </div>
-                    </div>
-                    <div class="googleplus">
-                        <!-- Place this tag where you want the share button to render. -->
-                        <div class="g-plus" data-action="share" data-height="24"></div>
-
-                        <!-- Place this tag after the last share tag. -->
-                        <script type="text/javascript">
-                            (function () {
-                                var po = document.createElement('script');
-                                po.type = 'text/javascript';
-                                po.async = true;
-                                po.src = 'https://apis.google.com/js/platform.js';
-                                var s = document.getElementsByTagName('script')[0];
-                                s.parentNode.insertBefore(po, s);
-                            })();
-                        </script>
-                    </div>
-                    <div class="email">
-                        <a class="btn btn-primary btn-sm" href=" mailto:?subject=Check%20out%20this%20post!%20%20{{ page.title | url_encode(true) }}&amp;body={{ page.url(true) | url_encode(true) }}">
-                            <i class="fas fa-envelope"></i>
-                            Share
-                        </a>
+                        <div class="post-meta">
+                            <i class="fas fa-tags meta-icons"></i>
+                            <div class="post-tags d-inline">
+                                {% for tag in page.taxonomy.tag | slice(0, 4) %}
+                                    <a class="meta-text" href="{{ base_url_absolute }}/tags/#{{ tag }}">{{ tag }}</a>
+                                {% endfor %}
+                            </div>
+                        </div>
+                        <div class="post-share">
+                            <div class="link">
+                                <button class="btn-clipboard btn btn-primary btn-sm" data-clipboard-text="{{ page.url(true) }}">
+                                    <i class="fas fa-clipboard icon"></i>Link
+                                </button>
+                            </div>
+                            <div class="twitter">
+                                <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-size="large" data-text="Check out this blog post " data-via="mrdemonwolf" data-related="mrdemonwolf" data-show-count="false">Tweet</a>
+                                <script async="async" src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                            </div>
+                            <div class="facebook">
+                                <!-- Load Facebook SDK for JavaScript -->
+                                <div id="fb-root"></div>
+                                <script>
+                                    (function (d, s, id) {
+                                        var js,
+                                            fjs = d.getElementsByTagName(s)[0];
+                                        if (d.getElementById(id))
+                                            return;
+                                        js = d.createElement(s);
+                                        js.id = id;
+                                        js.src = 'https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.0';
+                                        fjs.parentNode.insertBefore(js, fjs);
+                                    }(document, 'script', 'facebook-jssdk'));
+                                </script>
+                                <!-- Your share button code -->
+                                <div class="fb-share-button" data-href="{{ page.url(true)}}" data-layout="button" data-size="large" data-mobile-iframe="true">
+                                    <a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u={{ page.url(true) | url_encode(true)}}&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Share</a>
+                                </div>
+                            </div>
+                            <div class="email">
+                                <a class="btn btn-primary btn-sm" href=" mailto:?subject=Check%20out%20this%20post!%20%20{{ page.title | url_encode(true) }}&amp;body={{ page.url(true) | url_encode(true) }}">
+                                    <i class="fas fa-envelope icon"></i>Email
+                                </a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
             <hr>
-            <div class="row">
+            <div class="container-fluid w-75">
                 <div class="content">
                     {{ content }}
                 </div>
             </div>
-        </div>
-
-        {% if page.header.comments %}
-            <div class="container">
-                <div class="col-12">
-                    <div id="disqus_thread"></div>
+            {% if page.header.comments %}
+                <div class="container-fluid w-75">
+                    <div class="col-12">
+                        <div id="disqus_thread"></div>
+                    </div>
                 </div>
-            </div>
-            <script>
-                /**
+                <script>
+                    /**
                 *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
                 *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
                 */
-                /*
+                    /*
                 var disqus_config = function () {
                 this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
                 this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
                 };
                 */
-                (function () { // REQUIRED CONFIGURATION VARIABLE: EDIT THE SHORTNAME BELOW
-                    var d = document,
-                        s = d.createElement('script');
+                    (function () { // REQUIRED CONFIGURATION VARIABLE: EDIT THE SHORTNAME BELOW
+                        var d = document,
+                            s = d.createElement('script');
 
-                    s.src = 'https://{{ config.site.disqus }}.disqus.com/embed.js'; // IMPORTANT: Replace EXAMPLE with your forum shortname!
+                        s.src = 'https://{{ config.site.disqus }}.disqus.com/embed.js'; // IMPORTANT: Replace EXAMPLE with your forum shortname!
 
-                    s.setAttribute('data-timestamp', + new Date());
-                    (d.head || d.body).appendChild(s);
-                })();
-            </script>
-            <noscript>Please enable JavaScript to view the
-                <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a>
-            </noscript>
-        {% endif %}
+                        s.setAttribute('data-timestamp', + new Date());
+                        (d.head || d.body).appendChild(s);
+                    })();
+                </script>
+                <noscript>Please enable JavaScript to view the
+                    <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a>
+                </noscript>
+            {% endif %}
+        </div>
     </div>
+
+</div>
 {% endblock %}

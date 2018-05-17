@@ -25,30 +25,31 @@
 // });.
 // Contact us effect for when clicked into the form.
 $(document).ready(function () {
-    $('.js-input').keyup(function () {
-        if ($(this).val()) {
-            $(this).addClass('not-empty');
-        } else {
-            $(this).removeClass('not-empty');
-        }
-    });
-    // Fancy Box loading.
-    $(".fancybox").fancybox({
-        openEffect: "none",
-        closeEffect: "none"
-    });
+  $('.js-input').keyup(function () {
+    if ($(this).val()) {
+      $(this).addClass('not-empty');
+    } else {
+      $(this).removeClass('not-empty');
+    }
+  });
+  // Fancy Box loading.
+  $(".fancybox").fancybox({
+    openEffect: "none",
+    closeEffect: "none"
+  });
+  new ClipboardJS('.btn-clipboard');
 });
 
 $(function () {
-    //caches a jQuery object containing the header element
-    var header = $("#cookies-eu-banner");
-    $(window).scroll(function () {
-        var scroll = $(window).scrollTop();
+  //caches a jQuery object containing the header element
+  var header = $("#cookies-eu-banner");
+  $(window).scroll(function () {
+    var scroll = $(window).scrollTop();
 
-        if (scroll >= 100) {
-            header.addClass("scroll");
-        } else {
-            header.removeClass("scroll");
-        }
-    });
+    if (scroll >= 100) {
+      header.addClass("scroll");
+    } else {
+      header.removeClass("scroll");
+    }
+  });
 });
