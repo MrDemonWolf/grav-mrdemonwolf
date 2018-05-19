@@ -1,22 +1,24 @@
-<div class="container">
-    <div class="search">
-        <div class="row">
-            <div class="col-md-4 col-12">
-                {% set banner = page.media.images | first %}
-                {% if banner %}
-                    <a href="{{ page.url }}"><img class=" img-thumbnail" src="{{ banner.cropZoom(1280,720).url}}" alt="{{ page.title }} Serach Image"></a>
-                {% endif %}
-            </div>
-            <div class="col-md-8 col-12">
-                <div class="meta ml">
-                    <div class="mt-0 title">
-                        <a href="{{ page.url }}">{{ page.title }}</a>
-                    </div>
-                    <div class="date">
-                        <span class="search-date">{{ page.date|date(config.system.pages.dateformat.short) }}</span>
-                    </div>
-                    <p>{{ page.summary|raw }}</p>
+<div class="search">
+    <div class="row">
+        <div class="col-md-4 col-12">
+            {% set banner = page.media.images | first %}
+            {% if banner %}
+                <a href="{{ page.url }}"><img class=" img-thumbnail" src="{{ banner.cropZoom(1280,720).url}}" alt="{{ page.title }} Serach Image"></a>
+            {% endif %}
+        </div>
+        <div class="col-md-8 col-12">
+            <div class="meta ml">
+                <div class="mt-0 title">
+                    <a href="{{ page.url }}">{{ page.title }}</a>
                 </div>
+                <div class="date">
+                    <i class="far fa-calendar-alt" aria-hidden="true"></i>
+                    {{ page.date | date("m/d/Y") }}
+                </div>
+                <div class="read-time">
+                    <i class="fas fa-clock"></i>
+                    <span class="readTime">{{ page.content | readingtime }}</span></div>
+                <p>{{ page.summary|raw }}</p>
             </div>
         </div>
     </div>

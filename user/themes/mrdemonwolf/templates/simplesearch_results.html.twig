@@ -1,37 +1,47 @@
 {% extends 'partials/simplesearch_base.html.twig' %}
 
 {% block content %}
-    <div class="container">
-        <div class="jumbotron page_header">
-            <div class="container">
-                <div class="row">
-                    <div class="col-12 text-center">
-                        <div class="inner">
-                            <div class="text">
-                                <div class="header">{{"PLUGIN_SIMPLESEARCH.SEARCH_RESULTS"|t}}</div>
+    <div class="search-results">
+        <div class="container">
+            <div class="jumbotron page_header">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12 text-center">
+                            <div class="inner">
+                                <div class="text">
+                                    <div class="header">{{"PLUGIN_SIMPLESEARCH.SEARCH_RESULTS"|t}}</div>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <div>
-            {% include 'partials/simplesearch_searchbox.html.twig' %}
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12 col-md-6">
+                    <p class="m-0 text-box">
+                        {% if query %}
+                            {% set count = search_results ? search_results.count : 0 %}
+                            {% if count == 1 %}
+                                {{ "PLUGIN_SIMPLESEARCH.SEARCH_RESULTS_SUMMARY_SINGULAR"|t(query|e)|raw }}
+                            {% else %}
+                                {{ "PLUGIN_SIMPLESEARCH.SEARCH_RESULTS_SUMMARY_PLURAL"|t(query|e, count)|raw }}
+                            {% endif %}
+                        {% endif %}
+                    </p>
+                </div>
+                <div class="col-sm-12 col-md-6">
+                    {% include 'partials/simplesearch_searchbox.html.twig' %}
+                </div>
+            </div>
         </div>
-        <p>
-            {% if query %}
-                {% set count = search_results ? search_results.count : 0 %}
-                {% if count == 1 %}
-                    {{ "PLUGIN_SIMPLESEARCH.SEARCH_RESULTS_SUMMARY_SINGULAR"|t(query|e)|raw }}
-                {% else %}
-                    {{ "PLUGIN_SIMPLESEARCH.SEARCH_RESULTS_SUMMARY_PLURAL"|t(query|e, count)|raw }}
-                {% endif %}
-            {% endif %}
-        </p>
-        {% for page in search_results %}
-            {% include 'partials/simplesearch_item.html.twig' with {
-                'page' : page
-            } %}
-        {% endfor %}
+        <div class="container">
+            {% for page in search_results %}
+                {% include 'partials/simplesearch_item.html.twig' with {
+                    'page' : page
+                } %}
+            {% endfor %}
+        </div>
     </div>
 {% endblock %}

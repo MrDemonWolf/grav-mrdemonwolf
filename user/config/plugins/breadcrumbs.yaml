@@ -1,7 +1,7 @@
 enabled: true
 show_all: true
-built_in_css: true
-include_home: true
+built_in_css: false
+include_home: false
 include_current: true
 icon_home: ''
 icon_divider_classes: 'fas fa-angle-right'
