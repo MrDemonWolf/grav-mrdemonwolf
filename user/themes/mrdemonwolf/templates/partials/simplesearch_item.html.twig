@@ -15,8 +15,9 @@
                     <i class="far fa-calendar-alt" aria-hidden="true"></i>
                     {{ page.date | date("m/d/Y") }}
                 </div>
+                -
                 <div class="read-time">
-                    <i class="fas fa-clock"></i>
+                    Read Time:
                     <span class="readTime">{{ page.content | readingtime }}</span></div>
                 <p>{{ page.summary|raw }}</p>
             </div>

@@ -11,4 +11,18 @@
       font-size: 1.15em;
     }
   }
+  .form-group {
+    margin-left: auto;
+  }
+  @media (max-width: 576px) {
+    .form-group {
+      margin: 0 auto;
+      .form-control {
+        width: 100%;
+      }
+      .btn {
+        width: 100%;
+      }
+    }
+  }
 }

@@ -1,8 +1,10 @@
 <div class="col-12 col-md-6 col-xl-6 post">
     <div class="overlay">
         {% if post.header.cover.enable %}
-            <img class="img-thumbnail post-image" src="{{ post.media[post.header.cover.src].cropResize(1280,720).url }}" alt="blog post image">
-            <a class="btn btn-primary btn-sm cover read" href="{{ post.url }}">Read More</a>
+            <a class"postLink" href="{{ post.url }}">
+                <img class="img-thumbnail post-image" src="{{ post.media[post.header.cover.src].cropResize(1280,720).url }}" alt="blog post image">
+                <div class="btn btn-sm cover read">Read More</div>
+            </a>
         {% endif %}
     </div>
     <div class="post-meta">
@@ -11,8 +13,9 @@
             <i class="far fa-calendar-alt" aria-hidden="true"></i>
             {{ post.date | date("m/d/Y") }}
         </div>
+        |
         <div class="read-time d-inline">
-            <i class="fas fa-clock"></i>
+            Estimated Post Reading Time
             <span class="readTime">{{ post.content | readingtime }}</span>
         </div>
         <div class="summary">{{ post.content | striptags | truncate(115) }}</div>

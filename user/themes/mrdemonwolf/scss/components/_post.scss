@@ -2,193 +2,175 @@
 // This file contains all styles related to the post component.
 // -----------------------------------------------------------------------------
 .post {
-    margin-bottom: $content_margin;
-
-    .overlay {
-        display: inline-block;
-        position: relative;
-
-        img {
-            background-color: transparent;
-            border: none;
-            border-radius: 0;
+  margin-bottom: $content_margin;
+  .overlay {
+    display: inline-block;
+    position: relative;
+    img {
+      background-color: transparent;
+      border: none;
+      border-radius: 0;
+    }
+  }
+  .cover,
+  .no-cover {
+    &.read {
+      border-radius: 0;
+      padding-left: 24px;
+      padding-right: 24px;
+    }
+  }
+  .cover {
+    &.read {
+      position: absolute;
+      bottom: 4px;
+      right: 4px;
+      border-radius: 0;
+      background: rgba(#ffffff, 0.5);
+      color: $brand-color;
+      border: none;
+      &:hover,
+      &:focus {
+        box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+        background: rgba(#ffffff, 0.5);
+        color: $brand-color;
+        border: none;
+      }
+    }
+  }
+  .no-cover {
+    &.read {
+      border-radius: 0;
+      background: $brand-color-alt;
+    }
+  }
+  .inner {
+    margin-top: 24px;
+  }
+  .content {
+    p {
+      font-family: $second-font;
+      font-size: 1.15em;
+      color: #000000;
+      .bold {
+        font-weight: 700;
+      }
+      a {
+        color: #858585;
+        &:hover {
+          text-decoration: none;
+          color: #1d1d1d;
         }
+      }
     }
-
-    .cover,
-    .no-cover {
-        &.read {
-            border-radius: 0;
-            padding-left: 24px;
-            padding-right: 24px;
+  }
+  .hero {
+    height: 350px;
+    background-color: #000000;
+    background-image: url(../images/hero_bg.png);
+    background-position: center center;
+    background-size: cover;
+    position: relative;
+    text-align: center;
+  }
+  .author_pic {
+    float: right;
+    img {
+      background-color: #ffffff;
+      border-radius: 100%;
+      border: 4px solid $brand-color;
+      width: 175px;
+      height: 175px;
+      padding: 0;
+    }
+    .name {
+      font-family: $main-font;
+      font-size: 1.25m;
+      color: #000000;
+      font-weight: 700;
+    }
+  }
+  .post-share {
+    display: inline-flex;
+    .title {
+      font-family: $main-font;
+      font-size: 1.25em;
+      font-weight: 700;
+    }
+    .link,
+    .facebook,
+    .googleplus,
+    .email {
+      margin: 0.5em;
+    }
+    .twitter {
+      margin: 0.5em 0.5em 0.5em 0;
+    }
+    .googleplus {
+      display: flex;
+      align-self: center;
+    }
+    .link,
+    .email {
+      .icon {
+        padding-right: 8px;
+      }
+      .btn {
+        border: none;
+        background: $brand-color-alt;
+        height: 28px;
+        padding: 0.15rem 0.5rem;
+      }
+    }
+    .email {
+      .btn {
+        &:hover {
+          background: lighten($brand-color-alt, 0.25);
+          border: none;
         }
+      }
     }
-
-    .cover {
-        &.read {
-            position: absolute;
-            bottom: 4px;
-            right: 4px;
-            border-radius: 0;
-            background: rgba(#ffffff, 0.5);
-            color: $brand-color;
-            border: none;
-        }
-    }
-
-    .no-cover {
-        &.read {
-            border-radius: 0;
-            background: $brand-color-alt;
-        }
-    }
-
-    .inner {
-        margin-top: 24px;
-    }
-
-    .content {
-        p {
-            font-family: $second-font;
-            font-size: 1.15em;
-            color: #000000;
-
-            .bold {
-                font-weight: 700;
-            }
-
-            a {
-                color: #858585;
-
-                &:hover {
-                    text-decoration: none;
-                    color: #1d1d1d;
-                }
-            }
-        }
-    }
-
-    .hero {
-        height: 350px;
-        background-color: #000000;
-        background-image: url(../images/hero_bg.png);
-        background-position: center center;
-        background-size: cover;
-        position: relative;
-        text-align: center;
-    }
-
+  }
+  @media (max-width: 721px) {
     .author_pic {
-        float: right;
-
-        img {
-            background-color: #ffffff;
-            border-radius: 100%;
-            border: 4px solid $brand-color;
-            width: 175px;
-            height: 175px;
-            padding: 0;
-        }
-
-        .name {
-            font-family: $main-font;
-            font-size: 1.25m;
-            color: #000000;
-            font-weight: 700;
-        }
+      float: none;
+      margin: 0 auto;
     }
-
-    .post-share {
-        display: inline-flex;
-
-        .title {
-            font-family: $main-font;
-            font-size: 1.25em;
-            font-weight: 700;
-        }
-
-        .link,
-        .facebook,
-        .googleplus,
-        .email {
-            margin: 0.5em;
-        }
-
-        .twitter {
-            margin: 0.5em 0.5em 0.5em 0;
-        }
-
-        .googleplus {
-            display: flex;
-            align-self: center;
-        }
-
-        .link,
-        .email {
-            .icon {
-                padding-right: 8px;
-            }
-
-            .btn {
-                border: none;
-                background: $brand-color-alt;
-                height: 28px;
-                padding: 0.15rem 0.5rem;
-            }
-        }
-
-        .email {
-            .btn {
-                &:hover {
-                    background: lighten($brand-color-alt, 0.25);
-                    border: none;
-                }
-            }
-        }
+    .post-meta {
+      text-align: center;
     }
-
-    @media (max-width: 721px) {
-        .author_pic {
-            float: none;
-            margin: 0 auto;
-        }
-
-        .post-meta {
-            text-align: center;
-        }
-    }
+  }
 }
 
 .post-meta {
-    .title {
-        font-family: $main-font;
-        font-weight: 700;
-        font-size: 1.25em;
+  .title {
+    font-family: $main-font;
+    font-weight: 700;
+    font-size: 1.25em;
+  }
+  .author {
+    img {
+      padding: .25rem;
+      background-color: #fff;
+      border: none;
+      border-radius: none;
+      width: 75px;
+      max-width: 100%;
+      height: auto;
     }
-
-    .author {
-        img {
-            padding: .25rem;
-            background-color: #fff;
-            border: none;
-            border-radius: none;
-            width: 75px;
-            max-width: 100%;
-            height: auto;
-        }
-    }
-
-    .date, .read-time, .summary {
-        font-family: $second-font;
-        font-size: 1.15em;
-    }
-
-    .meta-text, .meta-icons {
-        font-size: 1.15em;
-    }
-
-    .meta-text {
-        font-family: $main-font;
-        color: #000000;
-    }
+  }
+  .date,
+  .read-time,
+  .summary {
+    font-family: $second-font;
+    font-size: 1.15em;
+  }
+  .meta-text,
+  .meta-icons {
+    font-size: 1.15em;
+  }
+  .meta-text {
+    font-family: $main-font;
+    color: #000000;
+  }
 }

@@ -1,6 +1,6 @@
 ---
 title: 'AMD Ryzen thoughts'
-date: '11/17/2017'
+date: '05/26/2017'
 taxonomy:
     category: blog
     tag:
