@@ -23,7 +23,7 @@
                             <i class="fas fa-tags meta-icons"></i>
                             <div class="post-tags d-inline">
                                 {% for tag in page.taxonomy.tag | slice(0, 4) %}
-                                    <a class="meta-text" href="{{ base_url_absolute }}/tags/#{{ tag }}">{{ tag }}</a>
+                                    <span class="meta-text">{{ tag }}</span>
                                 {% endfor %}
                             </div>
                         </div>
@@ -74,9 +74,7 @@
             </div>
             {% if page.header.comments %}
                 <div class="container-fluid w-75">
-                    <div class="col-12">
-                        <div id="disqus_thread"></div>
-                    </div>
+                    <div id="disqus_thread"></div>
                 </div>
                 <script>
                     /**

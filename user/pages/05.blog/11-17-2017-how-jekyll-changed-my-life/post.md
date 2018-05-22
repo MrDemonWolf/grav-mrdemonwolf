@@ -25,7 +25,7 @@ Even though I stopped using WordPress, there is a good use for WordPress and I c
 I used WordPress for many years as my go-to CMS and created a variety of websites with WordPress including portfolios, personal websites, blogs.
 Jekyll came to my attention after I heard about its ease of use and the lightweight option it offered if you want to use GitHub pages for hosting.
 
-Jekyll has been a great experience to me and it served me well for my personal website — https://www.mrdemonwolf.me — but I hope to see a stronger set of Documentation coming to it soon, especially when it comes to Liquid templating and the (hidden) powers it offers.
+Jekyll has been a great experience to me and it served me well for my personal website — <a href="https://www.mrdemonwolf.me">mrdemonwolf.me</a> — but I hope to see a stronger set of Documentation coming to it soon, especially when it comes to Liquid templating and the (hidden) powers it offers.
 These tricks, thought by one of the senior engineers at KreyNation — have given me the power to dynamically create the portfolio items I wanted to add during build for my personal website.
 What I do want to emphasize is that these functions for dynamically creating content have really given me a good insight on slightly more advanced templating.
 
