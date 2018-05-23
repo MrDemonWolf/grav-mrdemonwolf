@@ -10,12 +10,12 @@ taxonomy:
 slug: amd-ryzen-thoughts
 seo:
   type: summary
-  image: seo.png
+  image: amd-ryzen-thoughts.jpg
   description: 'Has AMD finally launched a CPU that can compete with Intel’s dominant position it obtained by creating the reliable solid i5 and i7 CPU’s — Did they finally catch up? With AMD’s launch of AMD Ryzen, which seems to be marketed towards a different type of audience due to it being cheaper then Intel’s i7 tier one processors — and notably the higher performance, it seems they are on top of the game again.'
 description: 'Has AMD finally launched a CPU that can compete with Intel’s dominant position it obtained by creating the reliable solid i5 and i7 CPU’s — Did they finally catch up?'
 cover:
   enable: true
-  src: cover.png
+  src: amd-ryzen-thoughts.jpg
   color: "#ffffff"
 comments: true
 ---

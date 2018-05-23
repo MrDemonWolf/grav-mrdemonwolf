@@ -11,12 +11,12 @@ taxonomy:
 slug: how-i-got-started-web-designing
 seo:
   type: summary
-  image:
+  image: how-i-got-started-web-designing.jpg
   description: 'How has Jekyll changed my life? I want to take the time to summarize my experiences with WordPress prior to Jekyll to compare how effective Jekyll has been over the past year. Even though I stopped using WordPress, there is a good use for WordPress and I can respect that.'
 description: 'How has Jekyll changed my life? I want to take the time to summarize my experiences with WordPress prior to Jekyll to compare how effective Jekyll has been over the past year.'
 cover:
   enable: true
-  src: cover.png
+  src: how-i-got-started-web-designing.jpg
   color: "#ffffff"
 comments: true
 ---
