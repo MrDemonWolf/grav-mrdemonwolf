@@ -20,7 +20,7 @@
 // });
 // $(function () {
 //     $(document).click(function (event) {
-//         $('.navbar-collapse').collapse('hide');
+//         $('.navbar-collapse').collapse('hide');T
 //     });
 // });.
 // Contact us effect for when clicked into the form.
@@ -37,7 +37,37 @@ $(document).ready(function () {
     openEffect: "none",
     closeEffect: "none"
   });
-  new ClipboardJS('.btn-clipboard');
+  $('button').tooltip({
+    trigger: 'click',
+    placement: 'bottom'
+  });
+  // Enable tooltips
+  $('[data-toggle="tooltip"]').tooltip()
+
+  function setTooltip(message) {
+    $('button').tooltip('hide')
+      .attr('data-original-title', message)
+      .tooltip('show');
+  }
+
+  function hideTooltip() {
+    setTimeout(function () {
+      $('button').tooltip('hide');
+    }, 1000);
+  }
+
+  var clipboard = new ClipboardJS('.btn-clipboard');
+
+  clipboard.on('success', function (e) {
+    setTooltip('Copied!');
+    hideTooltip();
+    e.clearSelection();
+  });
+
+  clipboard.on('error', function (e) {
+    setTooltip('Failed!');
+    hideTooltip();
+  });
 });
 
 $(function () {

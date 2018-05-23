@@ -32,7 +32,7 @@
       &:hover,
       &:focus {
         box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
-        background: rgba(#ffffff, 0.5);
+        background: rgba(#ffffff, 0.75);
         color: $brand-color;
         border: none;
       }
@@ -100,11 +100,12 @@
     .link,
     .facebook,
     .googleplus,
+    .twitter,
     .email {
-      margin: 0.5em;
-    }
-    .twitter {
       margin: 0.5em 0.5em 0.5em 0;
+    }
+    .email {
+      margin: 0.5em 0;
     }
     .googleplus {
       display: flex;

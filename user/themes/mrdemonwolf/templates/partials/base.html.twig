@@ -66,9 +66,12 @@
                 {# Clipboard JS #}
                 {% do
                     assets.addJs('theme://lib/clipboardjs/js/clipboard.min.js', 92) %}
+                {# Goodshare JS #}
+                {% do
+                    assets.addJs('theme://lib/goodsharejs/js/goodshare.min.js', 91) %}
                 {# Main JS #}
                 {% do
-                    assets.addJs('theme://js/main.js', 91) %}
+                    assets.addJs('theme://js/main.js', 90) %}
             {% endblock %}
             {{ assets.js() }}
 
