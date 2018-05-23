@@ -10,6 +10,10 @@
       background-color: transparent;
       border: none;
       border-radius: 0;
+      &:hover {
+        filter: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg"><filter id="filter"><feColorMatrix type="matrix" color-interpolation-filters="sRGB" values="0.2126 0.7152 0.0722 0 0 0.2126 0.7152 0.0722 0 0 0.2126 0.7152 0.0722 0 0 0 0 0 1 0" /><feGaussianBlur stdDeviation="3" /></filter></svg>#filter');
+        filter: blur(2px);
+      }
     }
   }
   .cover,
@@ -24,24 +28,48 @@
     &.read {
       position: absolute;
       bottom: 4px;
-      right: 4px;
+      left: 4px;
       border-radius: 0;
-      background: rgba(#ffffff, 0.5);
-      color: $brand-color;
-      border: none;
+      background: rgba(#000000, 0.75);
+      color: #ffffff;
+      font-size: 1.15em;
+      font-family: $main-font;
+      border: 2px solid #ffffff;
+      border-bottom: 0px solid #000000;
+      border-left: 0px solid #000000;
       &:hover,
       &:focus {
-        box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
-        background: rgba(#ffffff, 0.75);
-        color: $brand-color;
-        border: none;
+        position: absolute;
+        bottom: 4px;
+        left: 4px;
+        border-radius: 0;
+        background: rgba(#000000, 0.75);
+        color: #ffffff;
+        font-size: 1.15em;
+        font-family: $main-font;
+        border: 2px solid #ffffff;
+        border-bottom: 0px solid #000000;
+        border-left: 0px solid #000000;
       }
     }
   }
   .no-cover {
     &.read {
       border-radius: 0;
-      background: $brand-color-alt;
+      background: rgba(#000000, 0.75);
+      color: #ffffff;
+      font-size: 1.15em;
+      font-family: $main-font;
+      border: 2px solid #ffffff;
+      &:hover,
+      &:focus {
+        border-radius: 0;
+        background: #ffffff;
+        color: $brand-color;
+        font-family: $main-font;
+        border: 2px solid #000000;
+        transition: all 500ms;
+      }
     }
   }
   .inner {
