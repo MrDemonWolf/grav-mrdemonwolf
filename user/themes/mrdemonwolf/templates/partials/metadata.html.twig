@@ -11,6 +11,7 @@
 <meta property="og:site_name" content="{{ config.site.title }}"/>
 <meta property="og:type" content="{{ page.header.seo.type }}"/>
 <meta property="og:url" content="{{ page.url(true)}}"/>
-<meta property="og:image" content="{{ page.media[page.header.seo.image].url }}"/>
+<meta property="og:image" content="{{ bash_url_absolute }}{{ page.media[page.header.seo.image].url }}"/>
 <meta property="og:description" content="{{ page.header.description }}"/>
 <meta name="keywords" content="{{ page.header.seo.keywords }}">
+  {# {% if page.header.seo.image.true %}{% endif %} #}
