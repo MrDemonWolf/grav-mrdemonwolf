@@ -6,14 +6,18 @@
 <meta name="twitter:title" content="{{ page.title }}">
 <meta name="twitter:description" content="{{ page.header.seo.description }}">
 <meta name="twitter:creator" content="{{ config.site.creator}}">
-<meta name="twitter:image" content="{{ page.media[page.header.seo.image].url }}">
+<meta name="twitter:image" content="{{ page.media[page.header.seo.image.src].url }}">
+{% if page.header.seo.image.true %}<meta name="twitter:image" content="{{ page.media[page.header.seo.image.src].url }}">
+{% else %}
+<meta property="twitter:image" content="{{ url('theme://images/seo.png')}}"/>
+{% endif %}
 <meta property="og:title" content="{{ page.title }}"/>
 <meta property="og:site_name" content="{{ config.site.title }}"/>
 <meta property="og:type" content="{{ page.header.seo.type }}"/>
 <meta property="og:url" content="{{ page.url(true)}}"/>
-{% if page.header.seo.image.true %}<meta property="og:image" content="{{ bash_url_absolute }}{{ page.media[page.header.seo.image].url }}"/>
+{% if page.header.seo.image.true %}<meta property="og:image" content="{{ bash_url_absolute }}{{ page.media[page.header.seo.image.src].url }}"/>
 {% else %}
-<meta property="og:image" content="{{ url('theme://images/seo.ong')}}"/>
+<meta property="og:image" content="{{ url('theme://images/seo.png')}}"/>
 {% endif %}
 <meta property="og:description" content="{{ page.header.description }}"/>
 <meta name="keywords" content="{{ page.header.seo.keywords }}">

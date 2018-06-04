@@ -10,7 +10,7 @@ slug: hello-world
 seo:
   type: article
   image:
-    enable: true
+    enable: false
     src: cover.png
   description: 'Hello viewers of my blog. Welcome to the first official blog post on my new blog. You may be wondering what kind of content I will produce. Most of my blog posts will contain topics based of real life, tech, Linux, Windows and how-to guides.'
 description: 'Hello viewers of my blog. Welcome to the first official blog post on my new blog. You may be wondering what kind of content I will produce. '
