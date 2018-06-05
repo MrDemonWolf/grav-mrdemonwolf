@@ -11,7 +11,7 @@ seo:
   type: article
   image:
     enable: false
-    src: cover.png
+    src: hello-world.jpg
   description: 'Hello viewers of my blog. Welcome to the first official blog post on my new blog. You may be wondering what kind of content I will produce. Most of my blog posts will contain topics based of real life, tech, Linux, Windows and how-to guides.'
 description: 'Hello viewers of my blog. Welcome to the first official blog post on my new blog. You may be wondering what kind of content I will produce. '
 cover:
