@@ -4,7 +4,7 @@
         {% for galleryThumbnails in page.header.galleryThumbnails %}
             {% set image = page.media[galleryThumbnails.src].quality(100) %}
             {% set image_url = image.url %}
-            <div class="product col-lg-4 col-12 filter {{ galleryThumbnails.fliter }}">
+            <div class="product col-lg-4 col-12">
                 <div class="image-hovereffect">
                     <img src="{{ image_url }}" class="img-thumbnail">
                     <div class="overlay">

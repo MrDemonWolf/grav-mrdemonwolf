@@ -13,10 +13,11 @@
   }
   .form-group {
     margin-left: auto;
+    margin-bottom: 12px;
   }
   @media (max-width: 576px) {
     .form-group {
-      margin: 0 auto;
+      margin: 6px auto;
       .form-control {
         width: 100%;
       }

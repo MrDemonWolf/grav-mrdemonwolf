@@ -77,3 +77,9 @@
     transform: scale(1);
   }
 }
+
+@media (max-width: 992px) {
+  .product {
+    padding-bottom: $content_margin;
+  }
+}
