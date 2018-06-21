@@ -8,7 +8,7 @@ taxonomy:
         - office
         - business
         - free vs paid
-slug: amd-ryzen-thoughts
+slug: free-vs-paid-business-email-services
 seo:
   type: article
   image:
