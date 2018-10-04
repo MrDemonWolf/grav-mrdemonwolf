@@ -7,8 +7,6 @@ reverse_proxy_setup: false
 force_ssl: false
 force_lowercase_urls: true
 custom_base_url: ''
-username_regex: '^[a-z0-9_-]{3,16}$'
-pwd_regex: '(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}'
 intl_enabled: true
 languages:
   supported: {  }
@@ -133,15 +131,6 @@ media:
   allowed_fallback_types: {  }
   auto_metadata_exif: false
   upload_limit: 2097152
-session:
-  enabled: true
-  initialize: true
-  timeout: 1800
-  name: mrdemonwolf
-  secure: false
-  httponly: true
-  split: true
-  path: null
 gpm:
   releases: stable
   proxy_url: null
